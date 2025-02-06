@@ -1,28 +1,31 @@
 //Maya ASCII 2025ff03 scene
 //Name: Lamp Model.ma
-//Last modified: Tue, Jan 28, 2025 11:28:22 AM
+//Last modified: Thu, Jan 30, 2025 04:37:44 PM
 //Codeset: 1252
 requires maya "2025ff03";
+requires "stereoCamera" "10.0";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "38B8F77A-464F-37CD-503C-BFADD066C719";
+fileInfo "UUID" "EA9E31F0-449B-03D6-96FB-F08D6144E748";
 createNode transform -s -n "persp";
 	rename -uid "A5D54862-4FE8-5480-B24C-78860C3F75B9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 63.6363676878169 47.727275765862707 63.636367687816943 ;
-	setAttr ".r" -type "double3" -27.938352729602379 44.999999999999972 -5.172681101354183e-14 ;
+	setAttr ".t" -type "double3" 39.198889496515129 25.821180718940372 7.5083443764701041 ;
+	setAttr ".r" -type "double3" -20.738352731165087 439.3999999998436 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "31ECB18C-467B-0071-D244-099AADF266B0";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 101.86789208101226;
+	setAttr ".coi" 45.520800201130868;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".tp" -type "double3" 0 1.6517660617828369 0 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "51721999-4893-C612-0FC2-52B479F6E949";
@@ -43,13 +46,13 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "083A6314-4046-113D-2054-CAA995AC73F9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 0 1000.1 ;
+	setAttr ".t" -type "double3" 0.31487909401551972 8.5519303955629322 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "DA17EA7F-4E4A-905A-4AE4-18B927BBD94C";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 33.439173193722212;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -58,7 +61,7 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "426CE0F0-4002-A515-7210-B282608F762D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.1 0 0 ;
+	setAttr ".t" -type "double3" 1000.1 22.474344355758266 1.094640820980616 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "E4940D9E-4951-089C-A0DA-21BA420F67C7";
@@ -84,6 +87,19 @@ createNode mesh -n "base_geoShape" -p "base_geo";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999997019767761 0.415236696600914 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".dsm" 2;
+createNode mesh -n "base_geoShapeOrig" -p "base_geo";
+	rename -uid "6EADE573-468C-0AB1-E127-A7B1E902A455";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".gtag[0].gtagnm" -type "string" "cluster1";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 2 "e[291]" "e[299]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 247 ".uvst[0].uvsp[0:246]" -type "float2" 0.3958334 0.31474134
 		 0.375 0.68619841 0.41666669 0.31474137 0.39583337 0.68619841 0.4375 0.3147414 0.41666669
@@ -145,6 +161,8 @@ createNode mesh -n "base_geoShape" -p "base_geo";
 		 0.68843985 0.5 0.83749998 0.60416663 0.68843985;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 	setAttr -s 168 ".vt";
 	setAttr ".vt[0:165]"  -0.83959353 2.8142035 0 0.83959353 2.8142035 0 -0.82829142 2.87411952 -0.10481718
 		 -0.83959353 2.87411952 -0.10481718 -0.83959353 2.86812878 -0.09433651 -0.82829142 2.91798115 -0.060516223
@@ -772,7 +790,65 @@ createNode mesh -n "base_geoShape" -p "base_geo";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".dsm" 2;
+createNode mesh -n "base_geoShapeOrigTag" -p "base_geo";
+	rename -uid "11FC6786-413E-2402-189C-028E8FF5510C";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".gtag[0].gtagnm" -type "string" "cluster2";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 11 "e[348]" "e[350]" "e[352]" "e[354]" "e[356]" "e[358]" "e[360]" "e[362]" "e[364]" "e[366]" "e[368:369]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "base_geoShapeOrigTag1" -p "base_geo";
+	rename -uid "4D318AEA-4EF8-0F67-791C-D887EA4BB174";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".gtag[0].gtagnm" -type "string" "cluster3";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "vtx[74:75]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode parentConstraint -n "base_geo_parentConstraint1" -p "base_geo";
+	rename -uid "9A98109E-4C45-AE64-23DF-268028D12A97";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "base_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 0.99682330602082136 0 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "base_geo_scaleConstraint1" -p "base_geo";
+	rename -uid "BB500049-40CC-232D-AAE0-DF8F7F0F05AD";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "base_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
 createNode transform -n "lower_arm_geo" -p "Geometry";
 	rename -uid "17F96D85-4643-12A6-272E-90A22C6C2767";
 	addAttr -is true -ci true -k true -sn "currentUVSet" -ln "currentUVSet" -dt "string";
@@ -784,6 +860,26 @@ createNode mesh -n "lower_arm_geoShape" -p "lower_arm_geo";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999997019767761 0.31474149227142334 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr -s 72 ".pt[50:121]" -type "float3"  1.7881393e-07 0 0 0 0 0 0 
+		0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 0 0 
+		0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 
+		0 0 0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 
+		0 0 0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr ".dsm" 2;
+createNode mesh -n "polySurfaceShape1" -p "lower_arm_geo";
+	rename -uid "BE65B164-4ED4-577A-9BA2-A2928DC6A8E9";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999997019767761 0.31474149227142334 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 164 ".uvst[0].uvsp[0:163]" -type "float2" 0.36929849 0.76828945
 		 0.42453945 0.71283531 0.5 0.69282889 0.57546055 0.71283525 0.5 0.8325904 0.63070154
@@ -826,6 +922,14 @@ createNode mesh -n "lower_arm_geoShape" -p "lower_arm_geo";
 		 0.63531649 0.765625 0.58333331 0.68843985;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr -s 72 ".pt[50:121]" -type "float3"  1.7881393e-07 0 0 0 0 0 0 
+		0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 0 0 
+		0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 
+		0 0 0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 
+		0 0 0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 1.7881393e-07 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 122 ".vt[0:121]"  -0.088813059 12.72500229 -12.07834053 -0.066573218 12.71004009 -12.091342926
 		 -0.066573218 12.69586086 -12.075026512 -0.3926149 12.76702404 -12.041824341 -0.40412727 12.75673103 -12.050767899
 		 -0.40412727 12.7425499 -12.034450531 -0.63129389 12.89023399 -11.93475342 -0.65123385 12.8842907 -11.93991756
@@ -1312,6 +1416,69 @@ createNode mesh -n "lower_arm_geoShape" -p "lower_arm_geo";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dsm" 2;
+createNode mesh -n "lower_arm_geoShapeOrig" -p "lower_arm_geo";
+	rename -uid "695198D2-482A-7CD4-F150-9B8D85393B36";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".gtag[0].gtagnm" -type "string" "cluster4";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 11 "e[250]" "e[252]" "e[254]" "e[256]" "e[258]" "e[260]" "e[262]" "e[264]" "e[266]" "e[268]" "e[270:271]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "lower_arm_geoShapeOrigTag" -p "lower_arm_geo";
+	rename -uid "0D975117-4055-A059-3629-6E971D5232ED";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".gtag[0].gtagnm" -type "string" "cluster5";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 11 "e[274]" "e[276]" "e[278]" "e[280]" "e[282]" "e[284]" "e[286]" "e[288]" "e[290]" "e[292]" "e[294:295]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode parentConstraint -n "lower_arm_geo_parentConstraint1" -p "lower_arm_geo";
+	rename -uid "423E1DD0-451E-D6FB-41F5-92B749361C3B";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lower_arm_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 7.552645757363103 -4.3142646788396632e-08 0.37869180518604934 ;
+	setAttr ".tg[0].tor" -type "double3" 139.05518647724008 -89.943925801534732 179.95378227771303 ;
+	setAttr ".lr" -type "double3" -5.3846790757177342e-12 2.5444437451708434e-14 6.3611093629258376e-15 ;
+	setAttr ".rst" -type "double3" -3.8163916471489756e-17 8.8817841970012523e-16 -8.8817841970012523e-16 ;
+	setAttr ".rsrr" -type "double3" -5.384679075717735e-12 1.1131941385122757e-14 9.5416640443900281e-15 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "lower_arm_geo_scaleConstraint1" -p "lower_arm_geo";
+	rename -uid "50E1B8B4-4BC2-E2D6-60BA-0B8502FF7D2F";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lower_arm_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
 createNode transform -n "upper_arm_geo" -p "Geometry";
 	rename -uid "A9415CE0-4A3F-F6F3-9B1A-80B9EB887B0D";
 	addAttr -is true -ci true -k true -sn "currentUVSet" -ln "currentUVSet" -dt "string";
@@ -1323,6 +1490,18 @@ createNode mesh -n "upper_arm_geoShape" -p "upper_arm_geo";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".dsm" 2;
+createNode mesh -n "upper_arm_geoShapeOrig" -p "upper_arm_geo";
+	rename -uid "FF34A3A9-4FD2-309E-2DC0-2B9E1281C0EB";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".gtag[0].gtagnm" -type "string" "cluster6";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 2 "vtx[86]" "vtx[109]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 155 ".uvst[0].uvsp[0:154]" -type "float2" 0.36929849 0.76828945
 		 0.42453945 0.71283531 0.5 0.69282889 0.57546055 0.71283525 0.5 0.8325904 0.63070154
@@ -1363,6 +1542,8 @@ createNode mesh -n "upper_arm_geoShape" -p "upper_arm_geo";
 		 0.83966649 0.36261541 0.76973951 0.61142254 0.6142984;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 	setAttr -s 126 ".vt[0:125]"  0.088813066 22.15924454 0.44698757 0.066573225 22.14398956 0.45964575
 		 0.066573225 22.13018227 0.44300997 0.39261493 22.20208549 0.41143525 0.4041273 22.19158936 0.42014435
 		 0.4041273 22.17778397 0.4035086 0.63129389 22.32769775 0.30719393 0.65123385 22.32163811 0.3122223
@@ -1820,7 +2001,44 @@ createNode mesh -n "upper_arm_geoShape" -p "upper_arm_geo";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".dsm" 2;
+createNode parentConstraint -n "upper_arm_geo_parentConstraint1" -p "upper_arm_geo";
+	rename -uid "24E390D2-44BD-C20B-75DE-0AAD895A857B";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "upper_arm_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.011146221778766008 9.2119696049053346e-07 
+		0.4060168343265963 ;
+	setAttr ".tg[0].tor" -type "double3" 39.689394773373394 91.572627248427452 0.0016046010261678246 ;
+	setAttr ".lr" -type "double3" 6.361102489753075e-15 1.543397512393747e-15 -1.1421573824610631e-14 ;
+	setAttr ".rst" -type "double3" 5.377642775528102e-17 0 -1.7763568394002505e-15 ;
+	setAttr ".rsrr" -type "double3" 1.9083326359141729e-14 2.6098889622253649e-15 -2.8742608012543698e-15 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "upper_arm_geo_scaleConstraint1" -p "upper_arm_geo";
+	rename -uid "5BFA6F63-47DB-ED18-AFB9-389735F3008F";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "upper_arm_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
 createNode transform -n "head_geo" -p "Geometry";
 	rename -uid "1C89A3AC-4559-0434-EBFE-9F8DF84DE679";
 	addAttr -is true -ci true -k true -sn "currentUVSet" -ln "currentUVSet" -dt "string";
@@ -2796,23 +3014,404 @@ createNode mesh -n "head_geoShape" -p "head_geo";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dsm" 2;
+createNode parentConstraint -n "head_geo_parentConstraint1" -p "head_geo";
+	rename -uid "14A77432-4FF2-4CFB-644E-CFABC5FCE18A";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "head_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 2.3700680223054924 5.3646627211634268e-05 -0.061622246415595883 ;
+	setAttr ".tg[0].tor" -type "double3" 39.689394773366573 91.572627248427295 0.0016046010189670488 ;
+	setAttr ".lr" -type "double3" 3.9756933518293959e-13 1.8288189418415309e-14 -2.5444437451708071e-14 ;
+	setAttr ".rst" -type "double3" 4.8572257327350599e-17 0 -3.7747582837255322e-15 ;
+	setAttr ".rsrr" -type "double3" 4.1029155390879377e-13 9.5416640443905408e-15 3.1805546814635515e-15 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "head_geo_scaleConstraint1" -p "head_geo";
+	rename -uid "EFE28906-46D6-67D5-5631-68837E95D296";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "head_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode joint -n "COG_jnt";
+	rename -uid "F7309139-4D20-55D0-C4C2-B4A6444DA919";
+	setAttr ".v" no;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".radi" 0.53149351892289431;
+createNode joint -n "lower_arm_jnt" -p "COG_jnt";
+	rename -uid "62DD135C-49FB-644C-BC5A-6A99372376B1";
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 90.064571557030419 49.008937157536941 90.085486600915345 ;
+	setAttr ".radi" 1.2367807573309881;
+createNode joint -n "hinge_jnt" -p "lower_arm_jnt";
+	rename -uid "E2300EFE-4E02-5B92-D7CA-7DA260B70F32";
+	setAttr ".t" -type "double3" 15.244427975065754 -1.1102230246251565e-14 -3.4972025275692431e-15 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 0 269.94397787006289 0 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "upper_arm_jnt" -p "hinge_jnt";
+	rename -uid "34C49A68-4380-3F78-055F-C9AF71FA70D1";
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -90.25809904735938 -9.317635562572951 91.593713197487943 ;
+	setAttr ".radi" 1.2072949411189109;
+createNode joint -n "head_jnt" -p "upper_arm_jnt";
+	rename -uid "151262AF-407B-12C7-A986-20B721CE6390";
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jot" -type "string" "none";
+	setAttr ".radi" 1.2072949411189109;
+createNode parentConstraint -n "head_jnt_parentConstraint1" -p "head_jnt";
+	rename -uid "68ADC8ED-40DA-EF49-0016-EB9EECEC03F0";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "head_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -1.7763568394002505e-15 3.5527136788005009e-15 
+		-5.5511151231257827e-17 ;
+	setAttr ".rst" -type "double3" 14.674368861632296 0 7.049916206369744e-15 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "head_jnt_scaleConstraint1" -p "head_jnt";
+	rename -uid "A9B4958B-4DAF-B795-09E7-9097ACD73538";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "head_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "upper_arm_jnt_parentConstraint1" -p "upper_arm_jnt";
+	rename -uid "4B3B3750-4001-D690-6A55-81A37B48FA0F";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "upper_arm_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -3.3306690738754696e-15 7.1054273576010019e-15 
+		5.5511151231257827e-17 ;
+	setAttr ".tg[0].tor" -type "double3" -2.1602923750502986e-13 1.908891890755711e-13 
+		2.0673605429512861e-14 ;
+	setAttr ".lr" -type "double3" 2.5444437451708139e-13 -1.9083328088781102e-13 -1.2722218725854493e-14 ;
+	setAttr ".rst" -type "double3" 0.79238921403942242 9.3258734068513149e-15 0 ;
+	setAttr ".rsrr" -type "double3" 2.1627771833951923e-13 -1.8765272620634752e-13 -1.9083328088781457e-14 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "upper_arm_jnt_scaleConstraint1" -p "upper_arm_jnt";
+	rename -uid "DBC1B504-4BBD-6B3F-12B1-9B828BAC37A7";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "upper_arm_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "lower_arm_jnt_parentConstraint1" -p "lower_arm_jnt";
+	rename -uid "6EE5606D-4340-0281-BAE2-E4A9F2868821";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lower_arm_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 2.2204460492503131e-16 4.4408920985006262e-16 
+		0 ;
+	setAttr ".tg[0].tor" -type "double3" -3.1060104311167148e-18 1.2424041724466862e-17 
+		6.3611093629270335e-15 ;
+	setAttr ".lr" -type "double3" -3.9725156682451432e-31 1.4312496066585827e-14 -3.1805546814635168e-15 ;
+	setAttr ".rst" -type "double3" -0.7842409610748291 0.60196876525878906 0 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "lower_arm_jnt_scaleConstraint1" -p "lower_arm_jnt";
+	rename -uid "04034739-4B8F-77E3-7D4A-D7854B2BDE00";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lower_arm_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode joint -n "base_jnt" -p "COG_jnt";
+	rename -uid "29D8F784-4952-465A-0D96-278B96BAF795";
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".radi" 0.5;
+createNode parentConstraint -n "base_jnt_parentConstraint1" -p "base_jnt";
+	rename -uid "43F51DC2-4854-F29A-4A44-259D3595F021";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "base_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" -0.40412712097167969 -1.5572922229766846 0 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "base_jnt_scaleConstraint1" -p "base_jnt";
+	rename -uid "357E6ABB-4D14-62FA-A9C8-E6B5D2758A3B";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "base_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "COG_jnt_parentConstraint1" -p "COG_jnt";
+	rename -uid "A9A0002A-4C18-EA11-1696-74A6C989CF53";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "COG_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" 0.40412712097167969 2.2122349739074707 0 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "COG_jnt_scaleConstraint1" -p "COG_jnt";
+	rename -uid "BD6C7DE0-4487-E640-5C2B-A4A342282E9D";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "COG_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "COG_ctrl_grp";
+	rename -uid "AE33C1C1-4E49-C54A-06B1-1597DA275A06";
+	setAttr ".t" -type "double3" 0.40412712097167969 2.2122349739074707 0 ;
+createNode transform -n "COG_ctrl" -p "COG_ctrl_grp";
+	rename -uid "15C1D3C7-46BB-9EA5-5F96-19BEEB4D938A";
+createNode nurbsCurve -n "COG_ctrlShape" -p "COG_ctrl";
+	rename -uid "91F719E4-4EBB-AEB5-9A3C-E99B33B5C489";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		1.9097504740602056 4.7982373409884731e-17 -1.909750474060206
+		1.6537599889110389e-16 6.7857323231109122e-17 -2.7007950211643896
+		-1.9097504740602056 4.7982373409884719e-17 -1.9097504740602054
+		-2.700795021164391 3.5177356190060272e-33 -1.4000969082182322e-16
+		-1.9097504740602056 -4.7982373409884725e-17 1.9097504740602056
+		-2.7054048442833037e-16 -6.7857323231109171e-17 2.7007950211643914
+		1.9097504740602056 -4.7982373409884719e-17 1.9097504740602054
+		2.700795021164391 -9.2536792101100989e-33 3.6830646344534982e-16
+		1.9097504740602056 4.7982373409884731e-17 -1.909750474060206
+		1.6537599889110389e-16 6.7857323231109122e-17 -2.7007950211643896
+		-1.9097504740602056 4.7982373409884719e-17 -1.9097504740602054
+		;
+createNode transform -n "lower_arm_ctrl_grp" -p "COG_ctrl";
+	rename -uid "A33A8D4E-46A6-8BE4-C5D6-8B913AB10430";
+	setAttr ".t" -type "double3" -0.7842409610748291 0.60196876525878906 0 ;
+	setAttr ".r" -type "double3" 90.064571557030433 49.008937157536941 90.085486600915345 ;
+createNode transform -n "lower_arm_ctrl" -p "lower_arm_ctrl_grp";
+	rename -uid "9682D209-447B-587A-C301-BFB9DC164620";
+	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -4.4408920985006262e-16 0 ;
+	setAttr ".sp" -type "double3" -2.2204460492503131e-16 -4.4408920985006262e-16 0 ;
+createNode nurbsCurve -n "lower_arm_ctrlShape" -p "lower_arm_ctrl";
+	rename -uid "1FADB8F7-468E-C326-8692-39BB18BAE41A";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		1.0280354818150217 1.0280354818150219 4.7982373409884731e-17
+		8.9023355150269105e-17 1.4538617209835627 6.7857323231109122e-17
+		-1.0280354818150217 1.0280354818150217 4.7982373409884719e-17
+		-1.4538617209835631 7.5368448348528928e-17 3.5177356190060272e-33
+		-1.0280354818150217 -1.0280354818150217 -4.7982373409884725e-17
+		-1.4563432293248379e-16 -1.4538617209835634 -6.7857323231109171e-17
+		1.0280354818150217 -1.0280354818150217 -4.7982373409884719e-17
+		1.4538617209835631 -1.9826260956419082e-16 -9.2536792101100989e-33
+		1.0280354818150217 1.0280354818150219 4.7982373409884731e-17
+		8.9023355150269105e-17 1.4538617209835627 6.7857323231109122e-17
+		-1.0280354818150217 1.0280354818150217 4.7982373409884719e-17
+		;
+createNode transform -n "upper_arm_ctrl_grp" -p "lower_arm_ctrl";
+	rename -uid "AB406E78-46ED-B579-CC84-96A0D124BCE5";
+	setAttr ".t" -type "double3" 15.243653200295014 -3.9968028886505635e-15 0.79238883526338422 ;
+	setAttr ".r" -type "double3" 179.94469651815501 1.5817534044383212 99.319655818822582 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999989 1 ;
+createNode transform -n "upper_arm_ctrl" -p "upper_arm_ctrl_grp";
+	rename -uid "98409321-43E9-BE74-AEEA-8A8232E84164";
+	setAttr ".rp" -type "double3" 1.6653345369377348e-15 0 -1.1102230246251565e-16 ;
+	setAttr ".sp" -type "double3" 1.6653345369377348e-15 0 -1.1102230246251565e-16 ;
+createNode nurbsCurve -n "upper_arm_ctrlShape" -p "upper_arm_ctrl";
+	rename -uid "6B9A4612-4B57-5AEC-C066-9F9CFBBB9F21";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		1.3027311417856287 1.3027311417856289 4.7982373409884731e-17
+		1.1281079218758439e-16 1.8423400488390229 6.7857323231109122e-17
+		-1.3027311417856287 1.3027311417856284 4.7982373409884719e-17
+		-1.8423400488390236 9.5507233464687983e-17 3.5177356190060272e-33
+		-1.3027311417856287 -1.3027311417856287 -4.7982373409884725e-17
+		-1.845484627262593e-16 -1.842340048839024 -6.7857323231109171e-17
+		1.3027311417856287 -1.3027311417856284 -4.7982373409884719e-17
+		1.8423400488390236 -2.5123926197075598e-16 -9.2536792101100989e-33
+		1.3027311417856287 1.3027311417856289 4.7982373409884731e-17
+		1.1281079218758439e-16 1.8423400488390229 6.7857323231109122e-17
+		-1.3027311417856287 1.3027311417856284 4.7982373409884719e-17
+		;
+createNode transform -n "head_ctrl_grp" -p "upper_arm_ctrl";
+	rename -uid "4B3C65C0-4992-E01B-8F6A-178B5DA6D335";
+	setAttr ".t" -type "double3" 14.674368861632297 7.1054273576010019e-15 -3.8247183198336643e-14 ;
+	setAttr ".s" -type "double3" 1 1.0000000000000002 0.99999999999999978 ;
+createNode transform -n "head_ctrl" -p "head_ctrl_grp";
+	rename -uid "AD2E9BE1-42D5-70C5-E0FC-268482009EEC";
+	setAttr ".rp" -type "double3" 1.7763568394002505e-15 0 -5.5511151231257827e-17 ;
+	setAttr ".sp" -type "double3" 1.7763568394002505e-15 0 -5.5511151231257827e-17 ;
+createNode nurbsCurve -n "head_ctrlShape" -p "head_ctrl";
+	rename -uid "6F6356A5-4516-6C7E-4985-28BB0006F7A6";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		1.2014438282557582 1.2014438282557585 4.7982373409884731e-17
+		1.0403975593048294e-16 1.6990981563487444 6.7857323231109122e-17
+		-1.2014438282557582 1.201443828255758 4.7982373409884719e-17
+		-1.6990981563487451 8.8081548463369237e-17 3.5177356190060272e-33
+		-1.2014438282557582 -1.2014438282557582 -4.7982373409884725e-17
+		-1.7019982438789205e-16 -1.6990981563487453 -6.7857323231109171e-17
+		1.2014438282557582 -1.201443828255758 -4.7982373409884719e-17
+		1.6990981563487451 -2.3170541566739285e-16 -9.2536792101100989e-33
+		1.2014438282557582 1.2014438282557585 4.7982373409884731e-17
+		1.0403975593048294e-16 1.6990981563487444 6.7857323231109122e-17
+		-1.2014438282557582 1.201443828255758 4.7982373409884719e-17
+		;
+createNode transform -n "base_ctrl_grp" -p "COG_ctrl";
+	rename -uid "DE3E3FCC-4AF1-051F-BADA-D2B082496A40";
+	setAttr ".t" -type "double3" -0.40412712097167969 -1.5572922229766846 0 ;
+createNode transform -n "base_ctrl" -p "base_ctrl_grp";
+	rename -uid "0D2807C4-4B64-03C8-72B1-5FA7D7A3D290";
+createNode nurbsCurve -n "base_ctrlShape" -p "base_ctrl";
+	rename -uid "B0B43CBF-4954-0821-3BFC-CEAF18A5B3A8";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		7.549732538332222 4.7982373409884731e-17 -7.5497325383322229
+		6.5377366145269485e-16 6.7857323231109122e-17 -10.676934147998876
+		-7.549732538332222 4.7982373409884719e-17 -7.5497325383322202
+		-10.676934147998882 3.5177356190060272e-33 -5.5349415163754497e-16
+		-7.549732538332222 -4.7982373409884725e-17 7.549732538332222
+		-1.0695157958946716e-15 -6.7857323231109171e-17 10.676934147998884
+		7.549732538332222 -4.7982373409884719e-17 7.5497325383322202
+		10.676934147998882 -9.2536792101100989e-33 1.4560097399738958e-15
+		7.549732538332222 4.7982373409884731e-17 -7.5497325383322229
+		6.5377366145269485e-16 6.7857323231109122e-17 -10.676934147998876
+		-7.549732538332222 4.7982373409884719e-17 -7.5497325383322202
+		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DFF9DFF6-4A71-19FA-452F-13ACD91C8087";
+	rename -uid "D913925F-4C04-F920-65A6-D8A0581211CC";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D86E3BE0-45D7-7616-1DCF-EF8D7CA82792";
+	rename -uid "3948855C-4237-176D-EC3C-C7A8A79DBD5C";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "A284607F-4E72-4A62-2EE7-41A2487C6279";
+	rename -uid "787C81FB-40A2-C3CF-8D30-F3878A885660";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0BAC71A9-4B03-09A3-8F48-08BC3D40927A";
+	rename -uid "01E53587-42C9-261B-D560-08A375D30E21";
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "6507FB07-4369-FD18-6947-11BA4005C0D7";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "E76C6854-41F2-9D29-5928-5BAD21E3F9BA";
+	rename -uid "EF4C663B-4F7B-97B7-68F8-99ACC31EF252";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "75B46953-4592-849E-9C22-6B96F8698567";
 	setAttr ".g" yes;
@@ -2868,7 +3467,11 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
+		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
+		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
+		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
+		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 877\\n    -height 843\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 877\\n    -height 843\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
@@ -2877,6 +3480,53 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "9ED754B8-406F-1CC2-99CD-67ACA016C780";
 	setAttr ".b" -type "string" "playbackOptions -min 0 -max 40 -ast 0 -aet 40 ";
 	setAttr ".st" 6;
+createNode tweak -n "tweak1";
+	rename -uid "BF29C683-4CA8-7C9E-6F13-D19FBEFC89BD";
+	setAttr -s 13 ".vl[0].vt";
+	setAttr ".vl[0].vt[168]" -type "float3" -0.17787679 0 0 ;
+	setAttr ".vl[0].vt[169]" -type "float3" -0.17787679 0 0 ;
+	setAttr ".vl[0].vt[170]" -type "float3" -0.17787679 0 0 ;
+	setAttr ".vl[0].vt[171]" -type "float3" -0.17787679 0 0 ;
+	setAttr ".vl[0].vt[172]" -type "float3" -0.17787679 0 0 ;
+	setAttr ".vl[0].vt[173]" -type "float3" -0.17787679 0 0 ;
+	setAttr ".vl[0].vt[174]" -type "float3" -0.17787679 0 0 ;
+	setAttr ".vl[0].vt[175]" -type "float3" -0.17787679 0 0 ;
+	setAttr ".vl[0].vt[176]" -type "float3" -0.17787679 0 0 ;
+	setAttr ".vl[0].vt[177]" -type "float3" -0.17787679 0 0 ;
+	setAttr ".vl[0].vt[178]" -type "float3" -0.17787679 0 0 ;
+	setAttr ".vl[0].vt[179]" -type "float3" -0.17787679 0 0 ;
+createNode polySplitRing -n "polySplitRing1";
+	rename -uid "9AF22E68-4E7D-72AD-1016-C58021375FD9";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[1]" "e[3]" "e[5]" "e[8]" "e[11]" "e[14]" "e[17]" "e[20]" "e[23]" "e[26]" "e[29]" "e[32]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.27054339647293091;
+	setAttr ".dr" no;
+	setAttr ".re" 11;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing2";
+	rename -uid "906002CB-4DCC-0BAB-02CA-4B80C6CDA1E5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[93]" "e[95]" "e[97]" "e[100]" "e[103]" "e[106]" "e[109]" "e[112]" "e[115]" "e[118]" "e[121]" "e[124]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.26153740286827087;
+	setAttr ".dr" no;
+	setAttr ".re" 109;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing3";
+	rename -uid "CDB1881C-465C-019F-2554-FA8F5DD789EB";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 11 "e[95]" "e[248:249]" "e[251]" "e[253]" "e[255]" "e[257]" "e[261]" "e[263]" "e[265]" "e[267]" "e[269]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.64773422479629517;
+	setAttr ".re" 248;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -2920,9 +3570,280 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 connectAttr "geo_layer.di" "base_geo.do";
+connectAttr "base_geo_parentConstraint1.ctx" "base_geo.tx";
+connectAttr "base_geo_parentConstraint1.cty" "base_geo.ty";
+connectAttr "base_geo_parentConstraint1.ctz" "base_geo.tz";
+connectAttr "base_geo_parentConstraint1.crx" "base_geo.rx";
+connectAttr "base_geo_parentConstraint1.cry" "base_geo.ry";
+connectAttr "base_geo_parentConstraint1.crz" "base_geo.rz";
+connectAttr "base_geo_scaleConstraint1.csx" "base_geo.sx";
+connectAttr "base_geo_scaleConstraint1.csy" "base_geo.sy";
+connectAttr "base_geo_scaleConstraint1.csz" "base_geo.sz";
+connectAttr "polySplitRing1.out" "base_geoShape.i";
+connectAttr "tweak1.vl[0].vt[0]" "base_geoShape.twl";
+connectAttr "base_geoShapeOrigTag1.w" "base_geoShapeOrigTag.i";
+connectAttr "base_geoShapeOrig.w" "base_geoShapeOrigTag1.i";
+connectAttr "base_geo.ro" "base_geo_parentConstraint1.cro";
+connectAttr "base_geo.pim" "base_geo_parentConstraint1.cpim";
+connectAttr "base_geo.rp" "base_geo_parentConstraint1.crp";
+connectAttr "base_geo.rpt" "base_geo_parentConstraint1.crt";
+connectAttr "base_jnt.t" "base_geo_parentConstraint1.tg[0].tt";
+connectAttr "base_jnt.rp" "base_geo_parentConstraint1.tg[0].trp";
+connectAttr "base_jnt.rpt" "base_geo_parentConstraint1.tg[0].trt";
+connectAttr "base_jnt.r" "base_geo_parentConstraint1.tg[0].tr";
+connectAttr "base_jnt.ro" "base_geo_parentConstraint1.tg[0].tro";
+connectAttr "base_jnt.s" "base_geo_parentConstraint1.tg[0].ts";
+connectAttr "base_jnt.pm" "base_geo_parentConstraint1.tg[0].tpm";
+connectAttr "base_jnt.jo" "base_geo_parentConstraint1.tg[0].tjo";
+connectAttr "base_jnt.ssc" "base_geo_parentConstraint1.tg[0].tsc";
+connectAttr "base_jnt.is" "base_geo_parentConstraint1.tg[0].tis";
+connectAttr "base_geo_parentConstraint1.w0" "base_geo_parentConstraint1.tg[0].tw"
+		;
+connectAttr "base_geo.pim" "base_geo_scaleConstraint1.cpim";
+connectAttr "base_jnt.s" "base_geo_scaleConstraint1.tg[0].ts";
+connectAttr "base_jnt.pm" "base_geo_scaleConstraint1.tg[0].tpm";
+connectAttr "base_geo_scaleConstraint1.w0" "base_geo_scaleConstraint1.tg[0].tw";
 connectAttr "geo_layer.di" "lower_arm_geo.do";
+connectAttr "lower_arm_geo_parentConstraint1.ctx" "lower_arm_geo.tx";
+connectAttr "lower_arm_geo_parentConstraint1.cty" "lower_arm_geo.ty";
+connectAttr "lower_arm_geo_parentConstraint1.ctz" "lower_arm_geo.tz";
+connectAttr "lower_arm_geo_parentConstraint1.crx" "lower_arm_geo.rx";
+connectAttr "lower_arm_geo_parentConstraint1.cry" "lower_arm_geo.ry";
+connectAttr "lower_arm_geo_parentConstraint1.crz" "lower_arm_geo.rz";
+connectAttr "lower_arm_geo_scaleConstraint1.csx" "lower_arm_geo.sx";
+connectAttr "lower_arm_geo_scaleConstraint1.csy" "lower_arm_geo.sy";
+connectAttr "lower_arm_geo_scaleConstraint1.csz" "lower_arm_geo.sz";
+connectAttr "polySplitRing3.out" "lower_arm_geoShape.i";
+connectAttr "polySplitRing2.out" "lower_arm_geoShapeOrig.i";
+connectAttr "lower_arm_geoShapeOrig.w" "lower_arm_geoShapeOrigTag.i";
+connectAttr "lower_arm_geo.ro" "lower_arm_geo_parentConstraint1.cro";
+connectAttr "lower_arm_geo.pim" "lower_arm_geo_parentConstraint1.cpim";
+connectAttr "lower_arm_geo.rp" "lower_arm_geo_parentConstraint1.crp";
+connectAttr "lower_arm_geo.rpt" "lower_arm_geo_parentConstraint1.crt";
+connectAttr "lower_arm_jnt.t" "lower_arm_geo_parentConstraint1.tg[0].tt";
+connectAttr "lower_arm_jnt.rp" "lower_arm_geo_parentConstraint1.tg[0].trp";
+connectAttr "lower_arm_jnt.rpt" "lower_arm_geo_parentConstraint1.tg[0].trt";
+connectAttr "lower_arm_jnt.r" "lower_arm_geo_parentConstraint1.tg[0].tr";
+connectAttr "lower_arm_jnt.ro" "lower_arm_geo_parentConstraint1.tg[0].tro";
+connectAttr "lower_arm_jnt.s" "lower_arm_geo_parentConstraint1.tg[0].ts";
+connectAttr "lower_arm_jnt.pm" "lower_arm_geo_parentConstraint1.tg[0].tpm";
+connectAttr "lower_arm_jnt.jo" "lower_arm_geo_parentConstraint1.tg[0].tjo";
+connectAttr "lower_arm_jnt.ssc" "lower_arm_geo_parentConstraint1.tg[0].tsc";
+connectAttr "lower_arm_jnt.is" "lower_arm_geo_parentConstraint1.tg[0].tis";
+connectAttr "lower_arm_geo_parentConstraint1.w0" "lower_arm_geo_parentConstraint1.tg[0].tw"
+		;
+connectAttr "lower_arm_geo.pim" "lower_arm_geo_scaleConstraint1.cpim";
+connectAttr "lower_arm_jnt.s" "lower_arm_geo_scaleConstraint1.tg[0].ts";
+connectAttr "lower_arm_jnt.pm" "lower_arm_geo_scaleConstraint1.tg[0].tpm";
+connectAttr "lower_arm_geo_scaleConstraint1.w0" "lower_arm_geo_scaleConstraint1.tg[0].tw"
+		;
 connectAttr "geo_layer.di" "upper_arm_geo.do";
+connectAttr "upper_arm_geo_parentConstraint1.ctx" "upper_arm_geo.tx";
+connectAttr "upper_arm_geo_parentConstraint1.cty" "upper_arm_geo.ty";
+connectAttr "upper_arm_geo_parentConstraint1.ctz" "upper_arm_geo.tz";
+connectAttr "upper_arm_geo_parentConstraint1.crx" "upper_arm_geo.rx";
+connectAttr "upper_arm_geo_parentConstraint1.cry" "upper_arm_geo.ry";
+connectAttr "upper_arm_geo_parentConstraint1.crz" "upper_arm_geo.rz";
+connectAttr "upper_arm_geo_scaleConstraint1.csx" "upper_arm_geo.sx";
+connectAttr "upper_arm_geo_scaleConstraint1.csy" "upper_arm_geo.sy";
+connectAttr "upper_arm_geo_scaleConstraint1.csz" "upper_arm_geo.sz";
+connectAttr "upper_arm_geoShapeOrig.w" "upper_arm_geoShape.i";
+connectAttr "upper_arm_geo.ro" "upper_arm_geo_parentConstraint1.cro";
+connectAttr "upper_arm_geo.pim" "upper_arm_geo_parentConstraint1.cpim";
+connectAttr "upper_arm_geo.rp" "upper_arm_geo_parentConstraint1.crp";
+connectAttr "upper_arm_geo.rpt" "upper_arm_geo_parentConstraint1.crt";
+connectAttr "upper_arm_jnt.t" "upper_arm_geo_parentConstraint1.tg[0].tt";
+connectAttr "upper_arm_jnt.rp" "upper_arm_geo_parentConstraint1.tg[0].trp";
+connectAttr "upper_arm_jnt.rpt" "upper_arm_geo_parentConstraint1.tg[0].trt";
+connectAttr "upper_arm_jnt.r" "upper_arm_geo_parentConstraint1.tg[0].tr";
+connectAttr "upper_arm_jnt.ro" "upper_arm_geo_parentConstraint1.tg[0].tro";
+connectAttr "upper_arm_jnt.s" "upper_arm_geo_parentConstraint1.tg[0].ts";
+connectAttr "upper_arm_jnt.pm" "upper_arm_geo_parentConstraint1.tg[0].tpm";
+connectAttr "upper_arm_jnt.jo" "upper_arm_geo_parentConstraint1.tg[0].tjo";
+connectAttr "upper_arm_jnt.ssc" "upper_arm_geo_parentConstraint1.tg[0].tsc";
+connectAttr "upper_arm_jnt.is" "upper_arm_geo_parentConstraint1.tg[0].tis";
+connectAttr "upper_arm_geo_parentConstraint1.w0" "upper_arm_geo_parentConstraint1.tg[0].tw"
+		;
+connectAttr "upper_arm_geo.pim" "upper_arm_geo_scaleConstraint1.cpim";
+connectAttr "upper_arm_jnt.s" "upper_arm_geo_scaleConstraint1.tg[0].ts";
+connectAttr "upper_arm_jnt.pm" "upper_arm_geo_scaleConstraint1.tg[0].tpm";
+connectAttr "upper_arm_geo_scaleConstraint1.w0" "upper_arm_geo_scaleConstraint1.tg[0].tw"
+		;
 connectAttr "geo_layer.di" "head_geo.do";
+connectAttr "head_geo_parentConstraint1.ctx" "head_geo.tx";
+connectAttr "head_geo_parentConstraint1.cty" "head_geo.ty";
+connectAttr "head_geo_parentConstraint1.ctz" "head_geo.tz";
+connectAttr "head_geo_parentConstraint1.crx" "head_geo.rx";
+connectAttr "head_geo_parentConstraint1.cry" "head_geo.ry";
+connectAttr "head_geo_parentConstraint1.crz" "head_geo.rz";
+connectAttr "head_geo_scaleConstraint1.csx" "head_geo.sx";
+connectAttr "head_geo_scaleConstraint1.csy" "head_geo.sy";
+connectAttr "head_geo_scaleConstraint1.csz" "head_geo.sz";
+connectAttr "head_geo.ro" "head_geo_parentConstraint1.cro";
+connectAttr "head_geo.pim" "head_geo_parentConstraint1.cpim";
+connectAttr "head_geo.rp" "head_geo_parentConstraint1.crp";
+connectAttr "head_geo.rpt" "head_geo_parentConstraint1.crt";
+connectAttr "head_jnt.t" "head_geo_parentConstraint1.tg[0].tt";
+connectAttr "head_jnt.rp" "head_geo_parentConstraint1.tg[0].trp";
+connectAttr "head_jnt.rpt" "head_geo_parentConstraint1.tg[0].trt";
+connectAttr "head_jnt.r" "head_geo_parentConstraint1.tg[0].tr";
+connectAttr "head_jnt.ro" "head_geo_parentConstraint1.tg[0].tro";
+connectAttr "head_jnt.s" "head_geo_parentConstraint1.tg[0].ts";
+connectAttr "head_jnt.pm" "head_geo_parentConstraint1.tg[0].tpm";
+connectAttr "head_jnt.jo" "head_geo_parentConstraint1.tg[0].tjo";
+connectAttr "head_jnt.ssc" "head_geo_parentConstraint1.tg[0].tsc";
+connectAttr "head_jnt.is" "head_geo_parentConstraint1.tg[0].tis";
+connectAttr "head_geo_parentConstraint1.w0" "head_geo_parentConstraint1.tg[0].tw"
+		;
+connectAttr "head_geo.pim" "head_geo_scaleConstraint1.cpim";
+connectAttr "head_jnt.s" "head_geo_scaleConstraint1.tg[0].ts";
+connectAttr "head_jnt.pm" "head_geo_scaleConstraint1.tg[0].tpm";
+connectAttr "head_geo_scaleConstraint1.w0" "head_geo_scaleConstraint1.tg[0].tw";
+connectAttr "COG_jnt_scaleConstraint1.csx" "COG_jnt.sx";
+connectAttr "COG_jnt_scaleConstraint1.csy" "COG_jnt.sy";
+connectAttr "COG_jnt_scaleConstraint1.csz" "COG_jnt.sz";
+connectAttr "COG_jnt_parentConstraint1.ctx" "COG_jnt.tx";
+connectAttr "COG_jnt_parentConstraint1.cty" "COG_jnt.ty";
+connectAttr "COG_jnt_parentConstraint1.ctz" "COG_jnt.tz";
+connectAttr "COG_jnt_parentConstraint1.crx" "COG_jnt.rx";
+connectAttr "COG_jnt_parentConstraint1.cry" "COG_jnt.ry";
+connectAttr "COG_jnt_parentConstraint1.crz" "COG_jnt.rz";
+connectAttr "lower_arm_jnt_parentConstraint1.ctx" "lower_arm_jnt.tx";
+connectAttr "lower_arm_jnt_parentConstraint1.cty" "lower_arm_jnt.ty";
+connectAttr "lower_arm_jnt_parentConstraint1.ctz" "lower_arm_jnt.tz";
+connectAttr "lower_arm_jnt_parentConstraint1.crx" "lower_arm_jnt.rx";
+connectAttr "lower_arm_jnt_parentConstraint1.cry" "lower_arm_jnt.ry";
+connectAttr "lower_arm_jnt_parentConstraint1.crz" "lower_arm_jnt.rz";
+connectAttr "lower_arm_jnt_scaleConstraint1.csx" "lower_arm_jnt.sx";
+connectAttr "lower_arm_jnt_scaleConstraint1.csy" "lower_arm_jnt.sy";
+connectAttr "lower_arm_jnt_scaleConstraint1.csz" "lower_arm_jnt.sz";
+connectAttr "COG_jnt.s" "lower_arm_jnt.is";
+connectAttr "lower_arm_jnt.s" "hinge_jnt.is";
+connectAttr "upper_arm_jnt_parentConstraint1.ctx" "upper_arm_jnt.tx";
+connectAttr "upper_arm_jnt_parentConstraint1.cty" "upper_arm_jnt.ty";
+connectAttr "upper_arm_jnt_parentConstraint1.ctz" "upper_arm_jnt.tz";
+connectAttr "upper_arm_jnt_parentConstraint1.crx" "upper_arm_jnt.rx";
+connectAttr "upper_arm_jnt_parentConstraint1.cry" "upper_arm_jnt.ry";
+connectAttr "upper_arm_jnt_parentConstraint1.crz" "upper_arm_jnt.rz";
+connectAttr "upper_arm_jnt_scaleConstraint1.csx" "upper_arm_jnt.sx";
+connectAttr "upper_arm_jnt_scaleConstraint1.csy" "upper_arm_jnt.sy";
+connectAttr "upper_arm_jnt_scaleConstraint1.csz" "upper_arm_jnt.sz";
+connectAttr "hinge_jnt.s" "upper_arm_jnt.is";
+connectAttr "head_jnt_parentConstraint1.ctx" "head_jnt.tx";
+connectAttr "head_jnt_parentConstraint1.cty" "head_jnt.ty";
+connectAttr "head_jnt_parentConstraint1.ctz" "head_jnt.tz";
+connectAttr "head_jnt_parentConstraint1.crx" "head_jnt.rx";
+connectAttr "head_jnt_parentConstraint1.cry" "head_jnt.ry";
+connectAttr "head_jnt_parentConstraint1.crz" "head_jnt.rz";
+connectAttr "head_jnt_scaleConstraint1.csx" "head_jnt.sx";
+connectAttr "head_jnt_scaleConstraint1.csy" "head_jnt.sy";
+connectAttr "head_jnt_scaleConstraint1.csz" "head_jnt.sz";
+connectAttr "upper_arm_jnt.s" "head_jnt.is";
+connectAttr "head_jnt.ro" "head_jnt_parentConstraint1.cro";
+connectAttr "head_jnt.pim" "head_jnt_parentConstraint1.cpim";
+connectAttr "head_jnt.rp" "head_jnt_parentConstraint1.crp";
+connectAttr "head_jnt.rpt" "head_jnt_parentConstraint1.crt";
+connectAttr "head_jnt.jo" "head_jnt_parentConstraint1.cjo";
+connectAttr "head_ctrl.t" "head_jnt_parentConstraint1.tg[0].tt";
+connectAttr "head_ctrl.rp" "head_jnt_parentConstraint1.tg[0].trp";
+connectAttr "head_ctrl.rpt" "head_jnt_parentConstraint1.tg[0].trt";
+connectAttr "head_ctrl.r" "head_jnt_parentConstraint1.tg[0].tr";
+connectAttr "head_ctrl.ro" "head_jnt_parentConstraint1.tg[0].tro";
+connectAttr "head_ctrl.s" "head_jnt_parentConstraint1.tg[0].ts";
+connectAttr "head_ctrl.pm" "head_jnt_parentConstraint1.tg[0].tpm";
+connectAttr "head_jnt_parentConstraint1.w0" "head_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "head_jnt.ssc" "head_jnt_scaleConstraint1.tsc";
+connectAttr "head_jnt.pim" "head_jnt_scaleConstraint1.cpim";
+connectAttr "head_ctrl.s" "head_jnt_scaleConstraint1.tg[0].ts";
+connectAttr "head_ctrl.pm" "head_jnt_scaleConstraint1.tg[0].tpm";
+connectAttr "head_jnt_scaleConstraint1.w0" "head_jnt_scaleConstraint1.tg[0].tw";
+connectAttr "upper_arm_jnt.ro" "upper_arm_jnt_parentConstraint1.cro";
+connectAttr "upper_arm_jnt.pim" "upper_arm_jnt_parentConstraint1.cpim";
+connectAttr "upper_arm_jnt.rp" "upper_arm_jnt_parentConstraint1.crp";
+connectAttr "upper_arm_jnt.rpt" "upper_arm_jnt_parentConstraint1.crt";
+connectAttr "upper_arm_jnt.jo" "upper_arm_jnt_parentConstraint1.cjo";
+connectAttr "upper_arm_ctrl.t" "upper_arm_jnt_parentConstraint1.tg[0].tt";
+connectAttr "upper_arm_ctrl.rp" "upper_arm_jnt_parentConstraint1.tg[0].trp";
+connectAttr "upper_arm_ctrl.rpt" "upper_arm_jnt_parentConstraint1.tg[0].trt";
+connectAttr "upper_arm_ctrl.r" "upper_arm_jnt_parentConstraint1.tg[0].tr";
+connectAttr "upper_arm_ctrl.ro" "upper_arm_jnt_parentConstraint1.tg[0].tro";
+connectAttr "upper_arm_ctrl.s" "upper_arm_jnt_parentConstraint1.tg[0].ts";
+connectAttr "upper_arm_ctrl.pm" "upper_arm_jnt_parentConstraint1.tg[0].tpm";
+connectAttr "upper_arm_jnt_parentConstraint1.w0" "upper_arm_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "upper_arm_jnt.ssc" "upper_arm_jnt_scaleConstraint1.tsc";
+connectAttr "upper_arm_jnt.pim" "upper_arm_jnt_scaleConstraint1.cpim";
+connectAttr "upper_arm_ctrl.s" "upper_arm_jnt_scaleConstraint1.tg[0].ts";
+connectAttr "upper_arm_ctrl.pm" "upper_arm_jnt_scaleConstraint1.tg[0].tpm";
+connectAttr "upper_arm_jnt_scaleConstraint1.w0" "upper_arm_jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "lower_arm_jnt.ro" "lower_arm_jnt_parentConstraint1.cro";
+connectAttr "lower_arm_jnt.pim" "lower_arm_jnt_parentConstraint1.cpim";
+connectAttr "lower_arm_jnt.rp" "lower_arm_jnt_parentConstraint1.crp";
+connectAttr "lower_arm_jnt.rpt" "lower_arm_jnt_parentConstraint1.crt";
+connectAttr "lower_arm_jnt.jo" "lower_arm_jnt_parentConstraint1.cjo";
+connectAttr "lower_arm_ctrl.t" "lower_arm_jnt_parentConstraint1.tg[0].tt";
+connectAttr "lower_arm_ctrl.rp" "lower_arm_jnt_parentConstraint1.tg[0].trp";
+connectAttr "lower_arm_ctrl.rpt" "lower_arm_jnt_parentConstraint1.tg[0].trt";
+connectAttr "lower_arm_ctrl.r" "lower_arm_jnt_parentConstraint1.tg[0].tr";
+connectAttr "lower_arm_ctrl.ro" "lower_arm_jnt_parentConstraint1.tg[0].tro";
+connectAttr "lower_arm_ctrl.s" "lower_arm_jnt_parentConstraint1.tg[0].ts";
+connectAttr "lower_arm_ctrl.pm" "lower_arm_jnt_parentConstraint1.tg[0].tpm";
+connectAttr "lower_arm_jnt_parentConstraint1.w0" "lower_arm_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "lower_arm_jnt.ssc" "lower_arm_jnt_scaleConstraint1.tsc";
+connectAttr "lower_arm_jnt.pim" "lower_arm_jnt_scaleConstraint1.cpim";
+connectAttr "lower_arm_ctrl.s" "lower_arm_jnt_scaleConstraint1.tg[0].ts";
+connectAttr "lower_arm_ctrl.pm" "lower_arm_jnt_scaleConstraint1.tg[0].tpm";
+connectAttr "lower_arm_jnt_scaleConstraint1.w0" "lower_arm_jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "base_jnt_parentConstraint1.ctx" "base_jnt.tx";
+connectAttr "base_jnt_parentConstraint1.cty" "base_jnt.ty";
+connectAttr "base_jnt_parentConstraint1.ctz" "base_jnt.tz";
+connectAttr "base_jnt_parentConstraint1.crx" "base_jnt.rx";
+connectAttr "base_jnt_parentConstraint1.cry" "base_jnt.ry";
+connectAttr "base_jnt_parentConstraint1.crz" "base_jnt.rz";
+connectAttr "base_jnt_scaleConstraint1.csx" "base_jnt.sx";
+connectAttr "base_jnt_scaleConstraint1.csy" "base_jnt.sy";
+connectAttr "base_jnt_scaleConstraint1.csz" "base_jnt.sz";
+connectAttr "COG_jnt.s" "base_jnt.is";
+connectAttr "base_jnt.ro" "base_jnt_parentConstraint1.cro";
+connectAttr "base_jnt.pim" "base_jnt_parentConstraint1.cpim";
+connectAttr "base_jnt.rp" "base_jnt_parentConstraint1.crp";
+connectAttr "base_jnt.rpt" "base_jnt_parentConstraint1.crt";
+connectAttr "base_jnt.jo" "base_jnt_parentConstraint1.cjo";
+connectAttr "base_ctrl.t" "base_jnt_parentConstraint1.tg[0].tt";
+connectAttr "base_ctrl.rp" "base_jnt_parentConstraint1.tg[0].trp";
+connectAttr "base_ctrl.rpt" "base_jnt_parentConstraint1.tg[0].trt";
+connectAttr "base_ctrl.r" "base_jnt_parentConstraint1.tg[0].tr";
+connectAttr "base_ctrl.ro" "base_jnt_parentConstraint1.tg[0].tro";
+connectAttr "base_ctrl.s" "base_jnt_parentConstraint1.tg[0].ts";
+connectAttr "base_ctrl.pm" "base_jnt_parentConstraint1.tg[0].tpm";
+connectAttr "base_jnt_parentConstraint1.w0" "base_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "base_jnt.ssc" "base_jnt_scaleConstraint1.tsc";
+connectAttr "base_jnt.pim" "base_jnt_scaleConstraint1.cpim";
+connectAttr "base_ctrl.s" "base_jnt_scaleConstraint1.tg[0].ts";
+connectAttr "base_ctrl.pm" "base_jnt_scaleConstraint1.tg[0].tpm";
+connectAttr "base_jnt_scaleConstraint1.w0" "base_jnt_scaleConstraint1.tg[0].tw";
+connectAttr "COG_jnt.ro" "COG_jnt_parentConstraint1.cro";
+connectAttr "COG_jnt.pim" "COG_jnt_parentConstraint1.cpim";
+connectAttr "COG_jnt.rp" "COG_jnt_parentConstraint1.crp";
+connectAttr "COG_jnt.rpt" "COG_jnt_parentConstraint1.crt";
+connectAttr "COG_jnt.jo" "COG_jnt_parentConstraint1.cjo";
+connectAttr "COG_ctrl.t" "COG_jnt_parentConstraint1.tg[0].tt";
+connectAttr "COG_ctrl.rp" "COG_jnt_parentConstraint1.tg[0].trp";
+connectAttr "COG_ctrl.rpt" "COG_jnt_parentConstraint1.tg[0].trt";
+connectAttr "COG_ctrl.r" "COG_jnt_parentConstraint1.tg[0].tr";
+connectAttr "COG_ctrl.ro" "COG_jnt_parentConstraint1.tg[0].tro";
+connectAttr "COG_ctrl.s" "COG_jnt_parentConstraint1.tg[0].ts";
+connectAttr "COG_ctrl.pm" "COG_jnt_parentConstraint1.tg[0].tpm";
+connectAttr "COG_jnt_parentConstraint1.w0" "COG_jnt_parentConstraint1.tg[0].tw";
+connectAttr "COG_jnt.pim" "COG_jnt_scaleConstraint1.cpim";
+connectAttr "COG_ctrl.s" "COG_jnt_scaleConstraint1.tg[0].ts";
+connectAttr "COG_ctrl.pm" "COG_jnt_scaleConstraint1.tg[0].tpm";
+connectAttr "COG_jnt_scaleConstraint1.w0" "COG_jnt_scaleConstraint1.tg[0].tw";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "base_geoSG.message" ":defaultLightSet.message";
@@ -2939,6 +3860,13 @@ connectAttr "head_geoShape.iog" "base_geoSG.dsm" -na;
 connectAttr "base_geoSG.msg" "materialInfo1.sg";
 connectAttr "lambert2.msg" "materialInfo1.m";
 connectAttr "layerManager.dli[1]" "geo_layer.id";
+connectAttr "base_geoShapeOrigTag.w" "tweak1.ip[0].ig";
+connectAttr "tweak1.og[0]" "polySplitRing1.ip";
+connectAttr "base_geoShape.wm" "polySplitRing1.mp";
+connectAttr "polySurfaceShape1.o" "polySplitRing2.ip";
+connectAttr "lower_arm_geoShape.wm" "polySplitRing2.mp";
+connectAttr "lower_arm_geoShapeOrigTag.w" "polySplitRing3.ip";
+connectAttr "lower_arm_geoShape.wm" "polySplitRing3.mp";
 connectAttr "base_geoSG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;

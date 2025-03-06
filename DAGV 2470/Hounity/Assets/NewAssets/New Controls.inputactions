@@ -1,0 +1,80 @@
+{
+    "name": "New Controls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "49188fd3-7cc7-41ee-85a1-1537416a391d",
+            "actions": [
+                {
+                    "name": "LeftMovement",
+                    "type": "Button",
+                    "id": "6f02271e-5c4d-4cd1-9146-34742970b212",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightMovement",
+                    "type": "Button",
+                    "id": "07b3a06d-134c-4d14-bd2d-6f5e23cbd54d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "b6ac0255-dc06-43a7-8fe3-deabb839d18b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f184a2f7-5f68-411c-8678-16c9cc4e3183",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "BasicTouch",
+                    "action": "RightMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2dc295f0-725c-4ae1-867c-796c1edf5dea",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "BasicTouch",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3f425c12-d4ab-4f0d-a856-36641a28306f",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "BasicTouch",
+                    "action": "LeftMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "BasicTouch",
+            "bindingGroup": "BasicTouch",
+            "devices": []
+        }
+    ]
+}

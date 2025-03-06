@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8702867556124004762}
+  - component: {fileID: -5711543413108722343}
+  - component: {fileID: -8677844167554772903}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -32,6 +34,56 @@ Transform:
   - {fileID: 9040874618508995173}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5711543413108722343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3641816185482001436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6edba3bdf4063b4986cb96ae243412e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numPlats: {fileID: 11400000, guid: 88b0cc4c5ea964a458f5dd418b7d32a6, type: 2}
+  instancingAction: {fileID: 11400000, guid: 134d887b063c2d444ad22fccacf849e3, type: 2}
+  platHeight: 7
+--- !u!114 &-8677844167554772903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3641816185482001436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 11400000, guid: 134d887b063c2d444ad22fccacf849e3, type: 2}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  respondEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -5711543413108722343}
+        m_TargetAssemblyTypeName: EventDestructor, Assembly-CSharp
+        m_MethodName: Remove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  respondLateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdTime: 0.1
 --- !u!1 &6504689045369554865
 GameObject:
   m_ObjectHideFlags: 0

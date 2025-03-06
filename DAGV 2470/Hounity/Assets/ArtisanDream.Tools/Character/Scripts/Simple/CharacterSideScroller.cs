@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -37,6 +38,14 @@ public class CharacterSideScroller : MonoBehaviour
         var moveInput = Input.GetAxis("Horizontal");
         var moveDirection = new Vector3(moveInput, 0f, 0f) * moveSpeed;
         velocity.x = moveDirection.x;
+    }
+
+    public void HorizontalButton(int direction)
+    {
+        var moveInput = direction;
+        var moveDirection = new Vector3(moveInput, 0f, 0f) * moveSpeed;
+        velocity.x = moveDirection.x;
+        Console.WriteLine("Press!");
     }
 
     private void ApplyGravity()

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Endless_Level.unity
     guid: fcd8c05963aa72c4797024299a7d062c
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: ddd30470180206d4a820c2487702db3a, type: 2}

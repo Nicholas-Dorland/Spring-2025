@@ -41,4 +41,9 @@ public class BoolData : NameId
             setFalseEvent?.Invoke();
         }
     }
+
+    public bool GetValue
+    {
+        get { return value; }
+    }
 }

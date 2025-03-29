@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 517ffcb5a59524e6f93b38629b128126, type: 3}
   m_Name: CompleteStage 1
   m_EditorClassIdentifier: 
-  value: 0
+  value: 1
   onValueChangeEvent:
     m_PersistentCalls:
       m_Calls: []

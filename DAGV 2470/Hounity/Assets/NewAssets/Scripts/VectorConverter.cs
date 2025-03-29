@@ -19,33 +19,34 @@ public class VectorConverter : MonoBehaviour
     public void XToInt (IntData xValue)
     {
         int rounded = Mathf.RoundToInt(location.value.x);
-        xValue.UpdateValue(rounded);
+        xValue.SetValue(rounded);
     }
 
     public void YToInt(IntData yValue)
     {
         int rounded = Mathf.RoundToInt(location.value.y);
-        yValue.UpdateValue(rounded);
+        yValue.SetValue(rounded);
     }
 
     public void ZToInt(IntData zValue)
     {
         int rounded = Mathf.RoundToInt(location.value.z);
-        zValue.UpdateValue(rounded);
+        zValue.SetValue(rounded);
     }
 
     public void XToFloat(FloatData xValue)
     {
-        xValue.UpdateValue(x);
+
+        xValue.NewSetValue(x);
     }
 
     public void YToFloat(FloatData yValue)
     {
-        yValue.UpdateValue(y);
+        yValue.NewSetValue(y);
     }
 
     public void ZToFloat(FloatData zValue)
     {
-        zValue.UpdateValue(z);
+        zValue.NewSetValue(z);
     }
 }

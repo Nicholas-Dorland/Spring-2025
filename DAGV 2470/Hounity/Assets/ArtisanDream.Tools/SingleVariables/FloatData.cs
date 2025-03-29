@@ -36,6 +36,11 @@ public class FloatData : NameId
         Value = data.Value;
     }
 
+    public void NewSetValue(float data)
+    {
+        Value = data;
+    }
+
     private void CheckValueRange()
     {
         if (!(Value < minValue) && !(Value > maxValue)) return;

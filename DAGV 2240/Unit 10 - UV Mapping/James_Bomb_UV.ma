@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: James_Bomb.ma
-//Last modified: Fri, Apr 04, 2025 11:12:42 PM
+//Name: James_Bomb_UV.ma
+//Last modified: Fri, Apr 04, 2025 11:31:28 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "HIKSolverNode" -nodeType "HIKCharacterNode" -nodeType "HIKControlSetNode"
@@ -19,7 +19,7 @@ fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
 fileInfo "license" "education";
-fileInfo "UUID" "5BA13D21-4FF2-1977-2CEB-1EB685494589";
+fileInfo "UUID" "D06EECEC-4FB9-C08D-96F6-53AD69FB22C6";
 createNode transform -s -n "persp";
 	rename -uid "E34849F4-6540-E9D3-6154-A3AE6851E63C";
 	setAttr ".v" no;
@@ -222572,4 +222572,4 @@ connectAttr "groupId274.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId275.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId276.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId277.msg" ":initialShadingGroup.gn" -na;
-// End of James_Bomb.ma
+// End of James_Bomb_UV.ma

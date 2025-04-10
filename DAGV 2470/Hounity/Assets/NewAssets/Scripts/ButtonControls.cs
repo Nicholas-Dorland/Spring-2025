@@ -6,44 +6,6 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class ButtonControls : MonoBehaviour
-/*{
-    public float moveSpeed = 5f;
-    public Button leftButton;
-    public Button rightButton;
-    public Button downButton;
-    public Button upButton;
-    public Button jumpButton;
-
-    private CharacterController controller;
-    private Vector3 velocity;
-
-    void Start()
-    {
-        controller = GetComponent<CharacterController>();
-        leftButton.onClick.AddListener(() => HorizontalMovement()); //Move(Vector3.left));
-        rightButton.onClick.AddListener(() => Move(Vector3.right));
-        upButton.onClick.AddListener(() => Move(Vector3.up));
-        downButton.onClick.AddListener(() => Move(Vector3.down));
-    }
-
-    private void Update()
-    {
-        controller.Move(velocity * Time.deltaTime);
-    }
-
-    private void Move(Vector3 direction)
-    {
-        transform.position += direction * moveSpeed * Time.deltaTime;
-    }
-
-    private void HorizontalMovement()
-    {
-        var moveInput = Input.GetAxis("Horizontal");
-        var moveDirection = new Vector3(moveInput, 0f, 0f) * moveSpeed;
-        velocity.x = moveDirection.x;
-    }
-}*/
-
 {
     private CharacterController controller;
     private Vector3 velocity;
@@ -56,13 +18,13 @@ public class ButtonControls : MonoBehaviour
     public float gravity = -9.81f;
     public int maxJumps = 2;
     public int rotationSpeed = 200;
+    public float slopeMomentum = 4f;
 
     private int jumpsRemaining;
 
 
     void Start()
     {
-        //rb = GetComponent<Rigidbody2D>();
         controller = GetComponent<CharacterController>();
         jumpsRemaining = maxJumps;
 
@@ -72,10 +34,6 @@ public class ButtonControls : MonoBehaviour
 
     public void PointerDownLeft()
     {
-        // horizontalMove = -speed;
-
-        //FlipCharacter(-0.3f); // Flip the character to face left
-
         var moveDirection = new Vector3(-1f, 0f, 0f) * moveSpeed;
         velocity.x = moveDirection.x;
     }
@@ -88,9 +46,6 @@ public class ButtonControls : MonoBehaviour
 
     public void PointerDownRight()
     {
-        /*horizontalMove = speed;
-        FlipCharacter(0.3f);*/
-
         var moveDirection = new Vector3(1f, 0f, 0f) * moveSpeed;
         velocity.x = moveDirection.x;
     }
@@ -106,10 +61,9 @@ public class ButtonControls : MonoBehaviour
         if (jumpsRemaining == 0) return;
         velocity.y = Mathf.Sqrt(jumpForce * -2 * gravity);
         jumpsRemaining--;
-        Console.WriteLine(jumpsRemaining);
     }
 
-    private void ApplyGravity()
+    private void ApplyGravityAndSlopeMomentum()
     {
         if (!controller.isGrounded)
         {
@@ -119,24 +73,81 @@ public class ButtonControls : MonoBehaviour
         {
             velocity.y = 0;
             jumpsRemaining = maxJumps;
+
+            /* Detect and handle slopes
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, controller.height / 2 + 0.1f))
+            {
+                Vector3 surfaceNormal = hit.normal;
+                float slopeAngle = Vector3.Angle(Vector3.up, surfaceNormal);
+
+                if (slopeAngle > controller.slopeLimit) // Too steep to walk, simulate sliding
+                {
+                    Vector3 slideDirection = new Vector3(surfaceNormal.x, -surfaceNormal.y, 0);
+                    velocity += slideDirection * slopeMomentum;
+                }
+                else // On walkable slope
+                {
+                    velocity.x += surfaceNormal.x * slopeMomentum; // Adjust horizontal velocity
+                }
+            }*/
+            // Detect and handle slopes
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, controller.height / 2 + 0.1f))
+            {
+                Vector3 surfaceNormal = hit.normal;
+                float slopeAngle = Vector3.Angle(Vector3.up, surfaceNormal);
+
+                // Check if the ball is resting in a valley
+                if (Mathf.Abs(velocity.x) < 0.1f && slopeAngle > 0f && slopeAngle <= controller.slopeLimit)
+                {
+                    velocity.x = 0; // Stop horizontal movement
+                    return; // Exit early to prevent further movement adjustments
+                }
+
+                // Handle sliding or slope-based movement
+                if (slopeAngle > controller.slopeLimit) // Too steep to walk, simulate sliding
+                {
+                    Vector3 slideDirection = new Vector3(surfaceNormal.x, -surfaceNormal.y, 0);
+                    velocity += slideDirection * slopeMomentum;
+                }
+                else // On walkable slope
+                {
+                    velocity.x += surfaceNormal.x * slopeMomentum; // Adjust horizontal velocity
+                }
+            }
         }
     }
 
-    private void Rotate(float direction)
+    /*private void Rotate(float direction)
     {
         if (direction != 0)
         {
-            transform.Rotate(Vector3.forward, -direction * rotationSpeed * Time.deltaTime);
+            // Use the sign of direction to determine rotation direction
+            float rotationAmount = direction * rotationSpeed * Time.deltaTime;
+            transform.Rotate(Vector3.forward, -rotationAmount); // Negative for counter-clockwise, positive for clockwise
+        }
+    }*/
+
+    private void RotateBasedOnMovement(float direction)
+    {
+        if (Mathf.Abs(direction) > 0.01f) // Avoid tiny rotations for almost stationary movement
+        {
+            // Rotate clockwise for positive direction, counter-clockwise for negative direction
+            float rotationAmount = Mathf.Sign(direction) * rotationSpeed * Time.deltaTime;
+            transform.Rotate(Vector3.forward, -rotationAmount);
         }
     }
 
     void FixedUpdate()
     {
-        // Apply the horizontal movement
-        //rb.velocity = new Vector2(horizontalMove, rb.velocity.y);
-        controller.Move(velocity * Time.deltaTime);
+        /*controller.Move(velocity * Time.deltaTime);
         Rotate(velocity.x);
         ApplyGravity();
+    }*/
+        controller.Move(velocity * Time.deltaTime); // Apply movement
+        RotateBasedOnMovement(velocity.x); // Rotate based on movement
+        ApplyGravityAndSlopeMomentum(); // Handle gravity and slope dynamics
     }
 
     void FlipCharacter(float direction)

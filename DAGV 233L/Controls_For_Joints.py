@@ -13,7 +13,7 @@ def create_controls_for_joints():
         ctrl_name = joint + "_Ctrl"
         grp_name = ctrl_name + "_Grp"
         
-        ctrl = cmds.circle(name=ctrl_name, normal=(0, 0, 1), radius=10)[0]  # Adjust normal if needed
+        ctrl = cmds.circle(name=ctrl_name, normal=(1, 0, 0), radius=10)[0]  # Adjust normal if needed
         grp = cmds.group(ctrl, name=grp_name)
         
         # Match transformation to joint

@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author/>
+      <authoring_tool>FBX COLLADA exporter</authoring_tool>
+      <comments/>
+    </contributor>
+    <created>2025-04-11T06:40:07Z</created>
+    <keywords/>
+    <modified>2025-04-11T06:40:07Z</modified>
+    <revision/>
+    <subject/>
+    <title/>
+    <unit meter="0.010000" name="centimeter"/>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_visual_scenes>
+    <visual_scene id="James_Bomb" name="James_Bomb">
+      <node name="group3" id="group3" sid="group3">
+        <matrix sid="matrix">-1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+        <extra>
+          <technique profile="FCOLLADA">
+            <visibility>1.000000</visibility>
+          </technique>
+        </extra>
+      </node>
+      <node name="James_Bomb" id="James_Bomb" sid="James_Bomb">
+        <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+        <extra>
+          <technique profile="FCOLLADA">
+            <visibility>1.000000</visibility>
+          </technique>
+        </extra>
+        <node name="Geo" id="Geo" sid="Geo">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+          <node name="polySurface90" id="polySurface90" sid="polySurface90">
+            <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+            <extra>
+              <technique profile="FCOLLADA">
+                <visibility>1.000000</visibility>
+              </technique>
+            </extra>
+          </node>
+        </node>
+      </node>
+      <node name="QuickRigCharacter_Guides" id="QuickRigCharacter_Guides" sid="QuickRigCharacter_Guides" type="JOINT">
+        <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+        <extra>
+          <technique profile="FCOLLADA">
+            <visibility>0.000000</visibility>
+          </technique>
+        </extra>
+        <node name="Head" id="Head" sid="Head" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 386.710510 0.000000 0.000000 1.000000 3.490743 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="Hips" id="Hips" sid="Hips" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 166.620453 0.000000 0.000000 1.000000 -2.645859 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="LeftArm" id="LeftArm" sid="LeftArm" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 50.446056 0.000000 1.000000 0.000000 334.681580 0.000000 0.000000 1.000000 -1.941660 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="LeftFoot" id="LeftFoot" sid="LeftFoot" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 41.268791 0.000000 1.000000 0.000000 25.887173 0.000000 0.000000 1.000000 -8.427928 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="LeftForeArm" id="LeftForeArm" sid="LeftForeArm" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 64.133324 0.000000 1.000000 0.000000 272.885254 0.000000 0.000000 1.000000 -17.971558 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="LeftHand" id="LeftHand" sid="LeftHand" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 47.997177 0.000000 1.000000 0.000000 201.818527 0.000000 0.000000 1.000000 3.875639 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="LeftLeg" id="LeftLeg" sid="LeftLeg" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 36.814526 0.000000 1.000000 0.000000 98.512337 0.000000 0.000000 1.000000 -3.979538 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="LeftShoulder" id="LeftShoulder" sid="LeftShoulder" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 23.781012 0.000000 1.000000 0.000000 334.841980 0.000000 0.000000 1.000000 15.338247 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="LeftToeBase" id="LeftToeBase" sid="LeftToeBase" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 53.263885 0.000000 1.000000 0.000000 8.821671 0.000000 0.000000 1.000000 -0.153496 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="LeftUpLeg" id="LeftUpLeg" sid="LeftUpLeg" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 12.980453 0.000000 1.000000 0.000000 160.030960 0.000000 0.000000 1.000000 -0.731590 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="Neck" id="Neck" sid="Neck" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 310.713684 0.000000 0.000000 1.000000 11.154732 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="Reference" id="Reference" sid="Reference" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 1.498129 0.000000 0.000000 1.000000 -0.000008 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="RightArm" id="RightArm" sid="RightArm" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 -50.446056 0.000000 1.000000 0.000000 334.681580 0.000000 0.000000 1.000000 -1.941660 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="RightFoot" id="RightFoot" sid="RightFoot" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 -41.268791 0.000000 1.000000 0.000000 25.887173 0.000000 0.000000 1.000000 -8.427928 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="RightForeArm" id="RightForeArm" sid="RightForeArm" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 -64.133324 0.000000 1.000000 0.000000 272.885254 0.000000 0.000000 1.000000 -17.971558 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="RightHand" id="RightHand" sid="RightHand" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 -47.997177 0.000000 1.000000 0.000000 201.818527 0.000000 0.000000 1.000000 3.875639 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="RightLeg" id="RightLeg" sid="RightLeg" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 -36.814526 0.000000 1.000000 0.000000 98.512337 0.000000 0.000000 1.000000 -3.979538 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="RightShoulder" id="RightShoulder" sid="RightShoulder" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 -23.781012 0.000000 1.000000 0.000000 334.841980 0.000000 0.000000 1.000000 15.338247 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="RightToeBase" id="RightToeBase" sid="RightToeBase" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 -53.263885 0.000000 1.000000 0.000000 8.821671 0.000000 0.000000 1.000000 -0.153496 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="RightUpLeg" id="RightUpLeg" sid="RightUpLeg" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 -12.980453 0.000000 1.000000 0.000000 160.030960 0.000000 0.000000 1.000000 -0.731590 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="Spine" id="Spine" sid="Spine" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 190.409912 0.000000 0.000000 1.000000 -2.446545 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="Spine1" id="Spine1" sid="Spine1" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 236.109314 0.000000 0.000000 1.000000 2.810956 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="Spine2" id="Spine2" sid="Spine2" type="JOINT">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 272.058289 0.000000 0.000000 1.000000 9.428429 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+      </node>
+      <node name="QuickRigCharacter_Reference" id="QuickRigCharacter_Reference" sid="QuickRigCharacter_Reference">
+        <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 1.498129 0.000000 0.000000 1.000000 -0.000008 0.000000 0.000000 0.000000 1.000000</matrix>
+        <extra>
+          <technique profile="FCOLLADA">
+            <visibility>1.000000</visibility>
+          </technique>
+        </extra>
+        <node name="QuickRigCharacter_Hips" id="QuickRigCharacter_Hips" sid="QuickRigCharacter_Hips" type="JOINT">
+          <matrix sid="matrix">0.000000 -0.000000 1.000000 0.000000 0.999965 -0.008378 -0.000000 165.122314 0.008378 0.999965 0.000000 -2.645851 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+          <node name="QuickRigCharacter_LeftUpLeg" id="QuickRigCharacter_LeftUpLeg" sid="QuickRigCharacter_LeftUpLeg" type="JOINT">
+            <matrix sid="matrix">-0.937978 -0.320510 0.132176 -6.573224 0.022619 -0.437009 -0.899173 1.969408 0.345956 -0.840415 0.417154 12.980453 0.000000 0.000000 0.000000 1.000000</matrix>
+            <extra>
+              <technique profile="FCOLLADA">
+                <visibility>1.000000</visibility>
+              </technique>
+            </extra>
+            <node name="QuickRigCharacter_LeftLeg" id="QuickRigCharacter_LeftLeg" sid="QuickRigCharacter_LeftLeg" type="JOINT">
+              <matrix sid="matrix">0.952896 -0.273241 0.131637 66.054192 0.303297 0.858994 -0.412481 0.001797 -0.000369 0.432976 0.901405 -0.001483 0.000000 0.000000 0.000000 1.000000</matrix>
+              <extra>
+                <technique profile="FCOLLADA">
+                  <visibility>1.000000</visibility>
+                </technique>
+              </extra>
+              <node name="QuickRigCharacter_LeftFoot" id="QuickRigCharacter_LeftFoot" sid="QuickRigCharacter_LeftFoot" type="JOINT">
+                <matrix sid="matrix">0.748959 0.566161 -0.344270 72.897453 -0.657950 0.696982 -0.285164 0.000420 0.078502 0.440088 0.894516 -0.000189 0.000000 0.000000 0.000000 1.000000</matrix>
+                <extra>
+                  <technique profile="FCOLLADA">
+                    <visibility>1.000000</visibility>
+                  </technique>
+                </extra>
+                <node name="QuickRigCharacter_LeftToeBase" id="QuickRigCharacter_LeftToeBase" sid="QuickRigCharacter_LeftToeBase" type="JOINT">
+                  <matrix sid="matrix">1.000000 0.000000 -0.000000 22.440596 0.000000 1.000000 0.000000 0.000001 0.000000 0.000000 1.000000 0.000010 0.000000 0.000000 0.000000 1.000000</matrix>
+                  <extra>
+                    <technique profile="FCOLLADA">
+                      <visibility>1.000000</visibility>
+                    </technique>
+                  </extra>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node name="QuickRigCharacter_RightUpLeg" id="QuickRigCharacter_RightUpLeg" sid="QuickRigCharacter_RightUpLeg" type="JOINT">
+            <matrix sid="matrix">0.937980 0.320504 -0.132181 -6.573224 -0.022618 0.437022 0.899166 1.969408 0.345952 -0.840410 0.417167 -12.980453 0.000000 0.000000 0.000000 1.000000</matrix>
+            <extra>
+              <technique profile="FCOLLADA">
+                <visibility>1.000000</visibility>
+              </technique>
+            </extra>
+            <node name="QuickRigCharacter_RightLeg" id="QuickRigCharacter_RightLeg" sid="QuickRigCharacter_RightLeg" type="JOINT">
+              <matrix sid="matrix">0.952899 -0.273231 0.131638 -66.054169 0.303289 0.858992 -0.412490 -0.001777 -0.000371 0.432986 0.901401 0.001534 0.000000 0.000000 0.000000 1.000000</matrix>
+              <extra>
+                <technique profile="FCOLLADA">
+                  <visibility>1.000000</visibility>
+                </technique>
+              </extra>
+              <node name="QuickRigCharacter_RightFoot" id="QuickRigCharacter_RightFoot" sid="QuickRigCharacter_RightFoot" type="JOINT">
+                <matrix sid="matrix">0.748960 0.566164 -0.344264 -72.897484 -0.657948 0.696995 -0.285137 -0.000428 0.078516 0.440064 0.894527 0.000210 0.000000 0.000000 0.000000 1.000000</matrix>
+                <extra>
+                  <technique profile="FCOLLADA">
+                    <visibility>1.000000</visibility>
+                  </technique>
+                </extra>
+                <node name="QuickRigCharacter_RightToeBase" id="QuickRigCharacter_RightToeBase" sid="QuickRigCharacter_RightToeBase" type="JOINT">
+                  <matrix sid="matrix">1.000000 -0.000000 -0.000000 -22.440577 0.000000 1.000000 -0.000051 -0.000002 0.000000 0.000051 1.000000 -0.000002 0.000000 0.000000 0.000000 1.000000</matrix>
+                  <extra>
+                    <technique profile="FCOLLADA">
+                      <visibility>1.000000</visibility>
+                    </technique>
+                  </extra>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node name="QuickRigCharacter_Spine" id="QuickRigCharacter_Spine" sid="QuickRigCharacter_Spine" type="JOINT">
+            <matrix sid="matrix">0.994370 -0.105964 -0.000000 23.790295 0.105964 0.994370 0.000000 -0.000000 -0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+            <extra>
+              <technique profile="FCOLLADA">
+                <visibility>1.000000</visibility>
+              </technique>
+            </extra>
+            <node name="QuickRigCharacter_Spine1" id="QuickRigCharacter_Spine1" sid="QuickRigCharacter_Spine1" type="JOINT">
+              <matrix sid="matrix">0.997723 -0.067449 -0.000000 46.000832 0.067449 0.997723 0.000000 -0.000001 -0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+              <extra>
+                <technique profile="FCOLLADA">
+                  <visibility>1.000000</visibility>
+                </technique>
+              </extra>
+              <node name="QuickRigCharacter_Spine2" id="QuickRigCharacter_Spine2" sid="QuickRigCharacter_Spine2" type="JOINT">
+                <matrix sid="matrix">0.990574 0.136980 0.000000 36.552986 -0.136980 0.990574 -0.000000 -0.000002 -0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+                <extra>
+                  <technique profile="FCOLLADA">
+                    <visibility>1.000000</visibility>
+                  </technique>
+                </extra>
+                <node name="QuickRigCharacter_LeftShoulder" id="QuickRigCharacter_LeftShoulder" sid="QuickRigCharacter_LeftShoulder" type="JOINT">
+                  <matrix sid="matrix">-0.029305 0.998986 0.034172 62.984840 -0.543055 -0.044614 0.838511 3.102881 0.839185 0.006015 0.543812 23.781012 0.000000 0.000000 0.000000 1.000000</matrix>
+                  <extra>
+                    <technique profile="FCOLLADA">
+                      <visibility>1.000000</visibility>
+                    </technique>
+                  </extra>
+                  <node name="QuickRigCharacter_LeftArm" id="QuickRigCharacter_LeftArm" sid="QuickRigCharacter_LeftArm" type="JOINT">
+                    <matrix sid="matrix">0.314149 -0.893995 -0.319505 31.774920 -0.945194 -0.326066 -0.016997 -0.000004 -0.088984 0.307334 -0.947432 -0.000001 0.000000 0.000000 0.000000 1.000000</matrix>
+                    <extra>
+                      <technique profile="FCOLLADA">
+                        <visibility>1.000000</visibility>
+                      </technique>
+                    </extra>
+                    <node name="QuickRigCharacter_LeftForeArm" id="QuickRigCharacter_LeftForeArm" sid="QuickRigCharacter_LeftForeArm" type="JOINT">
+                      <matrix sid="matrix">0.769158 -0.639058 0.000624 65.292358 0.639058 0.769158 0.000471 -0.001610 -0.000781 0.000037 1.000000 -0.002115 0.000000 0.000000 0.000000 1.000000</matrix>
+                      <extra>
+                        <technique profile="FCOLLADA">
+                          <visibility>1.000000</visibility>
+                        </technique>
+                      </extra>
+                      <node name="QuickRigCharacter_LeftHand" id="QuickRigCharacter_LeftHand" sid="QuickRigCharacter_LeftHand" type="JOINT">
+                        <matrix sid="matrix">1.000000 -0.000040 -0.000001 76.079865 0.000040 1.000000 -0.000000 0.000216 0.000001 0.000000 1.000000 0.000022 0.000000 0.000000 0.000000 1.000000</matrix>
+                        <extra>
+                          <technique profile="FCOLLADA">
+                            <visibility>1.000000</visibility>
+                          </technique>
+                        </extra>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node name="QuickRigCharacter_RightShoulder" id="QuickRigCharacter_RightShoulder" sid="QuickRigCharacter_RightShoulder" type="JOINT">
+                  <matrix sid="matrix">0.029305 -0.998986 -0.034172 62.984840 0.543055 0.044614 -0.838511 3.102881 0.839185 0.006015 0.543812 -23.781012 0.000000 0.000000 0.000000 1.000000</matrix>
+                  <extra>
+                    <technique profile="FCOLLADA">
+                      <visibility>1.000000</visibility>
+                    </technique>
+                  </extra>
+                  <node name="QuickRigCharacter_RightArm" id="QuickRigCharacter_RightArm" sid="QuickRigCharacter_RightArm" type="JOINT">
+                    <matrix sid="matrix">0.314149 -0.893994 -0.319509 -31.774920 -0.945195 -0.326065 -0.017001 0.000004 -0.088982 0.307339 -0.947431 0.000001 0.000000 0.000000 0.000000 1.000000</matrix>
+                    <extra>
+                      <technique profile="FCOLLADA">
+                        <visibility>1.000000</visibility>
+                      </technique>
+                    </extra>
+                    <node name="QuickRigCharacter_RightForeArm" id="QuickRigCharacter_RightForeArm" sid="QuickRigCharacter_RightForeArm" type="JOINT">
+                      <matrix sid="matrix">0.769159 -0.639057 0.000619 -65.292252 0.639057 0.769159 0.000468 0.001617 -0.000776 0.000036 1.000000 0.002039 0.000000 0.000000 0.000000 1.000000</matrix>
+                      <extra>
+                        <technique profile="FCOLLADA">
+                          <visibility>1.000000</visibility>
+                        </technique>
+                      </extra>
+                      <node name="QuickRigCharacter_RightHand" id="QuickRigCharacter_RightHand" sid="QuickRigCharacter_RightHand" type="JOINT">
+                        <matrix sid="matrix">1.000000 -0.000040 -0.000002 -76.079971 0.000040 1.000000 -0.000000 -0.000141 0.000002 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+                        <extra>
+                          <technique profile="FCOLLADA">
+                            <visibility>1.000000</visibility>
+                          </technique>
+                        </extra>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node name="QuickRigCharacter_Neck" id="QuickRigCharacter_Neck" sid="QuickRigCharacter_Neck" type="JOINT">
+                  <matrix sid="matrix">0.989486 0.144627 0.000000 38.693924 -0.144627 0.989486 0.000000 -0.000001 0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+                  <extra>
+                    <technique profile="FCOLLADA">
+                      <visibility>1.000000</visibility>
+                    </technique>
+                  </extra>
+                  <node name="QuickRigCharacter_Head" id="QuickRigCharacter_Head" sid="QuickRigCharacter_Head" type="JOINT">
+                    <matrix sid="matrix">1.000000 0.000000 -0.000000 76.382294 0.000000 1.000000 -0.000000 -0.000003 -0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+                    <extra>
+                      <technique profile="FCOLLADA">
+                        <visibility>1.000000</visibility>
+                      </technique>
+                    </extra>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node name="QuickRigCharacter_Ctrl_Reference" id="QuickRigCharacter_Ctrl_Reference" sid="QuickRigCharacter_Ctrl_Reference">
+        <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 1.498129 0.000000 0.000000 1.000000 -0.000008 0.000000 0.000000 0.000000 1.000000</matrix>
+        <extra>
+          <technique profile="FCOLLADA">
+            <visibility>1.000000</visibility>
+          </technique>
+        </extra>
+        <node name="QuickRigCharacter_Ctrl_HipsEffector" id="QuickRigCharacter_Ctrl_HipsEffector" sid="QuickRigCharacter_Ctrl_HipsEffector">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 158.532837 0.000000 0.000000 1.000000 -0.731583 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_LeftAnkleEffector" id="QuickRigCharacter_Ctrl_LeftAnkleEffector" sid="QuickRigCharacter_Ctrl_LeftAnkleEffector">
+          <matrix sid="matrix">0.842813 -0.365695 0.394885 41.268734 0.447207 0.884066 -0.135770 24.389093 -0.299454 0.291024 0.908643 -8.427958 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_RightAnkleEffector" id="QuickRigCharacter_Ctrl_RightAnkleEffector" sid="QuickRigCharacter_Ctrl_RightAnkleEffector">
+          <matrix sid="matrix">0.842841 0.365658 -0.394858 -41.268734 -0.447163 0.884086 -0.135782 24.389101 0.299439 0.291009 0.908653 -8.427980 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_LeftWristEffector" id="QuickRigCharacter_Ctrl_LeftWristEffector" sid="QuickRigCharacter_Ctrl_LeftWristEffector">
+          <matrix sid="matrix">-0.212118 0.783596 -0.583938 47.997192 -0.934092 0.013026 0.356794 200.320541 0.287189 0.621134 0.729188 3.875648 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_RightWristEffector" id="QuickRigCharacter_Ctrl_RightWristEffector" sid="QuickRigCharacter_Ctrl_RightWristEffector">
+          <matrix sid="matrix">-0.212118 -0.783598 0.583935 -47.997189 0.934093 0.013024 0.356793 200.320572 -0.287188 0.621131 0.729191 3.875631 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_LeftKneeEffector" id="QuickRigCharacter_Ctrl_LeftKneeEffector" sid="QuickRigCharacter_Ctrl_LeftKneeEffector">
+          <matrix sid="matrix">0.768218 -0.074617 0.635825 35.829819 0.133137 0.990091 -0.044668 96.564232 -0.626192 0.118967 0.770539 0.244647 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_RightKneeEffector" id="QuickRigCharacter_Ctrl_RightKneeEffector" sid="QuickRigCharacter_Ctrl_RightKneeEffector">
+          <matrix sid="matrix">0.768233 0.074619 -0.635806 -35.829651 -0.133138 0.990090 -0.044671 96.564194 0.626172 0.118968 0.770555 0.244672 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_LeftElbowEffector" id="QuickRigCharacter_Ctrl_LeftElbowEffector" sid="QuickRigCharacter_Ctrl_LeftElbowEffector">
+          <matrix sid="matrix">-0.212095 0.783596 -0.583946 64.133499 -0.934106 0.013028 0.356759 271.387146 0.287162 0.621134 0.729198 -17.971741 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_RightElbowEffector" id="QuickRigCharacter_Ctrl_RightElbowEffector" sid="QuickRigCharacter_Ctrl_RightElbowEffector">
+          <matrix sid="matrix">-0.212095 -0.783598 0.583943 -64.133438 0.934106 0.013026 0.356758 271.387238 -0.287161 0.621132 0.729201 -17.971691 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_ChestOriginEffector" id="QuickRigCharacter_Ctrl_ChestOriginEffector" sid="QuickRigCharacter_Ctrl_ChestOriginEffector">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 188.911789 0.000000 -0.000000 1.000000 -2.446537 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_ChestEndEffector" id="QuickRigCharacter_Ctrl_ChestEndEffector" sid="QuickRigCharacter_Ctrl_ChestEndEffector">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 -0.000000 1.000000 -0.000000 333.343842 -0.000000 0.000000 1.000000 15.338255 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_LeftFootEffector" id="QuickRigCharacter_Ctrl_LeftFootEffector" sid="QuickRigCharacter_Ctrl_LeftFootEffector">
+          <matrix sid="matrix">0.842813 -0.365695 0.394885 53.263840 0.447207 0.884066 -0.135770 7.323610 -0.299454 0.291024 0.908643 -0.153514 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_RightFootEffector" id="QuickRigCharacter_Ctrl_RightFootEffector" sid="QuickRigCharacter_Ctrl_RightFootEffector">
+          <matrix sid="matrix">0.842841 0.365658 -0.394858 -53.263840 -0.447164 0.884086 -0.135782 7.323641 0.299439 0.291009 0.908653 -0.153502 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_LeftShoulderEffector" id="QuickRigCharacter_Ctrl_LeftShoulderEffector" sid="QuickRigCharacter_Ctrl_LeftShoulderEffector">
+          <matrix sid="matrix">0.209593 0.783459 -0.585033 50.446056 -0.946464 0.012324 -0.322575 333.183441 -0.245515 0.621322 0.744098 -1.941652 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_RightShoulderEffector" id="QuickRigCharacter_Ctrl_RightShoulderEffector" sid="QuickRigCharacter_Ctrl_RightShoulderEffector">
+          <matrix sid="matrix">0.209593 -0.783461 0.585030 -50.446056 0.946464 0.012326 -0.322575 333.183441 0.245514 0.621319 0.744101 -1.941652 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_HeadEffector" id="QuickRigCharacter_Ctrl_HeadEffector" sid="QuickRigCharacter_Ctrl_HeadEffector">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 385.212372 0.000000 0.000000 1.000000 3.490750 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_LeftHipEffector" id="QuickRigCharacter_Ctrl_LeftHipEffector" sid="QuickRigCharacter_Ctrl_LeftHipEffector">
+          <matrix sid="matrix">0.417182 -0.345951 0.840403 12.980453 0.139703 0.938136 0.316833 158.532822 -0.898021 -0.014770 0.439704 -0.731583 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_RightHipEffector" id="QuickRigCharacter_Ctrl_RightHipEffector" sid="QuickRigCharacter_Ctrl_RightHipEffector">
+          <matrix sid="matrix">0.417195 0.345940 -0.840401 -12.980453 -0.139707 0.938140 0.316820 158.532822 0.898015 -0.014766 0.439717 -0.731583 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>1.000000</visibility>
+            </technique>
+          </extra>
+        </node>
+        <node name="QuickRigCharacter_Ctrl_Hips" id="QuickRigCharacter_Ctrl_Hips" sid="QuickRigCharacter_Ctrl_Hips">
+          <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 165.122330 0.000000 0.000000 1.000000 -2.645851 0.000000 0.000000 0.000000 1.000000</matrix>
+          <extra>
+            <technique profile="FCOLLADA">
+              <visibility>0.000000</visibility>
+            </technique>
+          </extra>
+          <node name="QuickRigCharacter_Ctrl_LeftUpLeg" id="QuickRigCharacter_Ctrl_LeftUpLeg" sid="QuickRigCharacter_Ctrl_LeftUpLeg">
+            <matrix sid="matrix">0.417182 -0.345951 0.840403 12.980453 0.139703 0.938136 0.316833 -6.589493 -0.898021 -0.014770 0.439704 1.914268 0.000000 0.000000 0.000000 1.000000</matrix>
+            <extra>
+              <technique profile="FCOLLADA">
+                <visibility>1.000000</visibility>
+              </technique>
+            </extra>
+            <node name="QuickRigCharacter_Ctrl_LeftLeg" id="QuickRigCharacter_Ctrl_LeftLeg" sid="QuickRigCharacter_Ctrl_LeftLeg">
+              <matrix sid="matrix">0.901420 0.000355 -0.432947 0.000000 -0.131616 0.952896 -0.273250 -66.054169 0.412456 0.303296 0.859006 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+              <extra>
+                <technique profile="FCOLLADA">
+                  <visibility>1.000000</visibility>
+                </technique>
+              </extra>
+              <node name="QuickRigCharacter_Ctrl_LeftFoot" id="QuickRigCharacter_Ctrl_LeftFoot" sid="QuickRigCharacter_Ctrl_LeftFoot">
+                <matrix sid="matrix">0.894519 -0.345468 -0.283703 0.000000 0.344262 0.937214 -0.055791 -72.897484 0.285165 -0.047762 0.957288 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+                <extra>
+                  <technique profile="FCOLLADA">
+                    <visibility>1.000000</visibility>
+                  </technique>
+                </extra>
+                <node name="QuickRigCharacter_Ctrl_LeftToeBase" id="QuickRigCharacter_Ctrl_LeftToeBase" sid="QuickRigCharacter_Ctrl_LeftToeBase">
+                  <matrix sid="matrix">1.000000 -0.000000 0.000000 0.000010 0.000000 1.000000 0.000000 -17.065502 -0.000000 0.000000 1.000000 14.572183 0.000000 0.000000 0.000000 1.000000</matrix>
+                  <extra>
+                    <technique profile="FCOLLADA">
+                      <visibility>1.000000</visibility>
+                    </technique>
+                  </extra>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node name="QuickRigCharacter_Ctrl_RightUpLeg" id="QuickRigCharacter_Ctrl_RightUpLeg" sid="QuickRigCharacter_Ctrl_RightUpLeg">
+            <matrix sid="matrix">0.417195 0.345940 -0.840401 -12.980453 -0.139707 0.938140 0.316820 -6.589493 0.898015 -0.014766 0.439717 1.914268 0.000000 0.000000 0.000000 1.000000</matrix>
+            <extra>
+              <technique profile="FCOLLADA">
+                <visibility>1.000000</visibility>
+              </technique>
+            </extra>
+            <node name="QuickRigCharacter_Ctrl_RightLeg" id="QuickRigCharacter_Ctrl_RightLeg" sid="QuickRigCharacter_Ctrl_RightLeg">
+              <matrix sid="matrix">0.901415 -0.000357 0.432956 -0.000004 0.131615 0.952901 -0.273236 -66.054169 -0.412466 0.303283 0.859006 0.000646 0.000000 0.000000 0.000000 1.000000</matrix>
+              <extra>
+                <technique profile="FCOLLADA">
+                  <visibility>1.000000</visibility>
+                </technique>
+              </extra>
+              <node name="QuickRigCharacter_Ctrl_RightFoot" id="QuickRigCharacter_Ctrl_RightFoot" sid="QuickRigCharacter_Ctrl_RightFoot">
+                <matrix sid="matrix">0.894534 0.345426 0.283707 0.000002 -0.344217 0.937231 -0.055800 -72.897484 -0.285174 -0.047742 0.957286 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+                <extra>
+                  <technique profile="FCOLLADA">
+                    <visibility>1.000000</visibility>
+                  </technique>
+                </extra>
+                <node name="QuickRigCharacter_Ctrl_RightToeBase" id="QuickRigCharacter_Ctrl_RightToeBase" sid="QuickRigCharacter_Ctrl_RightToeBase">
+                  <matrix sid="matrix">1.000000 0.000001 0.000000 -0.001222 -0.000001 1.000000 0.000000 -17.065502 -0.000000 -0.000000 1.000000 14.572183 0.000000 0.000000 0.000000 1.000000</matrix>
+                  <extra>
+                    <technique profile="FCOLLADA">
+                      <visibility>1.000000</visibility>
+                    </technique>
+                  </extra>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node name="QuickRigCharacter_Ctrl_Spine" id="QuickRigCharacter_Ctrl_Spine" sid="QuickRigCharacter_Ctrl_Spine">
+            <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 23.789459 0.000000 -0.000000 1.000000 0.199314 0.000000 0.000000 0.000000 1.000000</matrix>
+            <extra>
+              <technique profile="FCOLLADA">
+                <visibility>1.000000</visibility>
+              </technique>
+            </extra>
+            <node name="QuickRigCharacter_Ctrl_Spine1" id="QuickRigCharacter_Ctrl_Spine1" sid="QuickRigCharacter_Ctrl_Spine1">
+              <matrix sid="matrix">1.000000 0.000000 -0.000000 0.000000 -0.000000 1.000000 -0.000000 45.699402 0.000000 0.000000 1.000000 5.257501 0.000000 0.000000 0.000000 1.000000</matrix>
+              <extra>
+                <technique profile="FCOLLADA">
+                  <visibility>1.000000</visibility>
+                </technique>
+              </extra>
+              <node name="QuickRigCharacter_Ctrl_Spine2" id="QuickRigCharacter_Ctrl_Spine2" sid="QuickRigCharacter_Ctrl_Spine2">
+                <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 -0.000000 1.000000 -0.000000 35.948975 -0.000000 0.000000 1.000000 6.617473 0.000000 0.000000 0.000000 1.000000</matrix>
+                <extra>
+                  <technique profile="FCOLLADA">
+                    <visibility>1.000000</visibility>
+                  </technique>
+                </extra>
+                <node name="QuickRigCharacter_Ctrl_LeftShoulder" id="QuickRigCharacter_Ctrl_LeftShoulder" sid="QuickRigCharacter_Ctrl_LeftShoulder">
+                  <matrix sid="matrix">1.000000 -0.000000 -0.000000 23.781012 0.000000 1.000000 0.000000 62.783691 0.000000 -0.000000 1.000000 5.909819 0.000000 0.000000 0.000000 1.000000</matrix>
+                  <extra>
+                    <technique profile="FCOLLADA">
+                      <visibility>1.000000</visibility>
+                    </technique>
+                  </extra>
+                  <node name="QuickRigCharacter_Ctrl_LeftArm" id="QuickRigCharacter_Ctrl_LeftArm" sid="QuickRigCharacter_Ctrl_LeftArm">
+                    <matrix sid="matrix">0.209593 0.783459 -0.585033 26.665045 -0.946464 0.012324 -0.322575 -0.160400 -0.245515 0.621322 0.744098 -17.279907 0.000000 0.000000 0.000000 1.000000</matrix>
+                    <extra>
+                      <technique profile="FCOLLADA">
+                        <visibility>1.000000</visibility>
+                      </technique>
+                    </extra>
+                    <node name="QuickRigCharacter_Ctrl_LeftForeArm" id="QuickRigCharacter_Ctrl_LeftForeArm" sid="QuickRigCharacter_Ctrl_LeftForeArm">
+                      <matrix sid="matrix">0.769141 -0.000592 -0.639079 65.292297 0.000741 1.000000 -0.000035 0.000000 0.639079 -0.000447 0.769141 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+                      <extra>
+                        <technique profile="FCOLLADA">
+                          <visibility>1.000000</visibility>
+                        </technique>
+                      </extra>
+                      <node name="QuickRigCharacter_Ctrl_LeftHand" id="QuickRigCharacter_Ctrl_LeftHand" sid="QuickRigCharacter_Ctrl_LeftHand">
+                        <matrix sid="matrix">1.000000 0.000001 -0.000037 76.079933 -0.000001 1.000000 0.000001 0.000000 0.000037 -0.000001 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+                        <extra>
+                          <technique profile="FCOLLADA">
+                            <visibility>1.000000</visibility>
+                          </technique>
+                        </extra>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node name="QuickRigCharacter_Ctrl_RightShoulder" id="QuickRigCharacter_Ctrl_RightShoulder" sid="QuickRigCharacter_Ctrl_RightShoulder">
+                  <matrix sid="matrix">1.000000 0.000000 0.000000 -23.781012 -0.000000 1.000000 0.000000 62.783691 -0.000000 -0.000000 1.000000 5.909819 0.000000 0.000000 0.000000 1.000000</matrix>
+                  <extra>
+                    <technique profile="FCOLLADA">
+                      <visibility>1.000000</visibility>
+                    </technique>
+                  </extra>
+                  <node name="QuickRigCharacter_Ctrl_RightArm" id="QuickRigCharacter_Ctrl_RightArm" sid="QuickRigCharacter_Ctrl_RightArm">
+                    <matrix sid="matrix">0.209593 -0.783461 0.585030 -26.665045 0.946464 0.012326 -0.322575 -0.160400 0.245514 0.621319 0.744101 -17.279907 0.000000 0.000000 0.000000 1.000000</matrix>
+                    <extra>
+                      <technique profile="FCOLLADA">
+                        <visibility>1.000000</visibility>
+                      </technique>
+                    </extra>
+                    <node name="QuickRigCharacter_Ctrl_RightForeArm" id="QuickRigCharacter_Ctrl_RightForeArm" sid="QuickRigCharacter_Ctrl_RightForeArm">
+                      <matrix sid="matrix">0.769142 0.000588 0.639078 -65.292297 -0.000737 1.000000 -0.000033 0.000000 -0.639078 -0.000445 0.769142 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+                      <extra>
+                        <technique profile="FCOLLADA">
+                          <visibility>1.000000</visibility>
+                        </technique>
+                      </extra>
+                      <node name="QuickRigCharacter_Ctrl_RightHand" id="QuickRigCharacter_Ctrl_RightHand" sid="QuickRigCharacter_Ctrl_RightHand">
+                        <matrix sid="matrix">1.000000 -0.000002 0.000038 -76.079933 0.000002 1.000000 0.000001 -0.000000 -0.000038 -0.000001 1.000000 -0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+                        <extra>
+                          <technique profile="FCOLLADA">
+                            <visibility>1.000000</visibility>
+                          </technique>
+                        </extra>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node name="QuickRigCharacter_Ctrl_Neck" id="QuickRigCharacter_Ctrl_Neck" sid="QuickRigCharacter_Ctrl_Neck">
+                  <matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 -0.000000 1.000000 -0.000000 38.655396 -0.000000 0.000000 1.000000 1.726303 0.000000 0.000000 0.000000 1.000000</matrix>
+                  <extra>
+                    <technique profile="FCOLLADA">
+                      <visibility>1.000000</visibility>
+                    </technique>
+                  </extra>
+                  <node name="QuickRigCharacter_Ctrl_Head" id="QuickRigCharacter_Ctrl_Head" sid="QuickRigCharacter_Ctrl_Head">
+                    <matrix sid="matrix">1.000000 -0.000000 -0.000000 -0.000000 -0.000000 1.000000 -0.000000 75.996826 0.000000 0.000000 1.000000 -7.663989 0.000000 0.000000 0.000000 1.000000</matrix>
+                    <extra>
+                      <technique profile="FCOLLADA">
+                        <visibility>1.000000</visibility>
+                      </technique>
+                    </extra>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <extra>
+        <technique profile="MAX3D">
+          <frame_rate>24.000000</frame_rate>
+        </technique>
+        <technique profile="FCOLLADA">
+          <start_time>0.041667</start_time>
+          <end_time>2.000000</end_time>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#James_Bomb"/>
+  </scene>
+</COLLADA>
